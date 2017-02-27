@@ -25,7 +25,7 @@ public class cameraShift : MonoBehaviour {
 	
 	void Update ()
     {
-        RaycastHit hit;
+   /*     RaycastHit hit;
         startPos = transform.localPosition;
         fwd = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(startPos,fwd, out hit))
@@ -41,6 +41,6 @@ public class cameraShift : MonoBehaviour {
                 transform.localPosition = new Vector3(-0.4f, 10.95f, Mathf.Lerp(transform.localPosition.x, downPos.z, Time.deltaTime));
                 transform.localRotation = new Quaternion(Mathf.Lerp(transform.localRotation.x, downRot.x, Time.deltaTime), 0f, 0f, 0f);
             }
-        }
+        }*/
     }
 }
