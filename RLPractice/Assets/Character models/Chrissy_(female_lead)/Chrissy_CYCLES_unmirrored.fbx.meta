@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 4fc3e0570e25d5a41950f340f2b35eb0
+timeCreated: 1489436249
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone.004
+    100004: Camera
+    100006: //RootNode
+    100008: Cube
+    100010: head
+    100012: head_end
+    100014: Lamp
+    100016: Point
+    100018: Point.001
+    100020: spine 1
+    100022: spine 1.001
+    100024: spine 1.002
+    100026: spine 1.003
+    100028: spine 1.004
+    100030: spine 1.005
+    100032: spine 1.006
+    100034: spine 1.007
+    100036: spine 1.008
+    100038: spine 1.009
+    100040: spine 1.010
+    100042: spine 1.010_end
+    100044: spine 1.011
+    100046: spine 1.012
+    100048: spine 1.013
+    100050: spine 1.014
+    100052: spine 1.014_end
+    100054: spine 1.015
+    100056: spine 1.016
+    100058: spine 1.017
+    100060: spine 1.018
+    100062: spine 1.018_end
+    100064: spine 1.019
+    100066: spine 1.020
+    100068: spine 1.021
+    100070: spine 1.022
+    100072: spine 1.022_end
+    100074: spine 1.023
+    100076: spine 1.024
+    100078: spine 1.025
+    100080: spine 1.026
+    100082: spine 1.026_end
+    100084: spine 1.027
+    100086: spine 1.028
+    100088: spine 1.029
+    100090: spine 1.030
+    100092: spine 1.030_end
+    100094: spine 2
+    100096: spine 3
+    100098: spine 4
+    100100: spine 4.001
+    100102: spine 4.002
+    100104: spine 4.003
+    100106: spine 4.004
+    100108: spine 4.005
+    100110: spine 4.006
+    100112: spine 4.007
+    100114: spine 4.008
+    100116: spine 4.009
+    100118: spine 4.010
+    100120: spine 4.011
+    100122: spine 4.011_end
+    100124: spine 4.012
+    100126: spine 4.012_end
+    400000: Armature
+    400002: Bone.004
+    400004: Camera
+    400006: //RootNode
+    400008: Cube
+    400010: head
+    400012: head_end
+    400014: Lamp
+    400016: Point
+    400018: Point.001
+    400020: spine 1
+    400022: spine 1.001
+    400024: spine 1.002
+    400026: spine 1.003
+    400028: spine 1.004
+    400030: spine 1.005
+    400032: spine 1.006
+    400034: spine 1.007
+    400036: spine 1.008
+    400038: spine 1.009
+    400040: spine 1.010
+    400042: spine 1.010_end
+    400044: spine 1.011
+    400046: spine 1.012
+    400048: spine 1.013
+    400050: spine 1.014
+    400052: spine 1.014_end
+    400054: spine 1.015
+    400056: spine 1.016
+    400058: spine 1.017
+    400060: spine 1.018
+    400062: spine 1.018_end
+    400064: spine 1.019
+    400066: spine 1.020
+    400068: spine 1.021
+    400070: spine 1.022
+    400072: spine 1.022_end
+    400074: spine 1.023
+    400076: spine 1.024
+    400078: spine 1.025
+    400080: spine 1.026
+    400082: spine 1.026_end
+    400084: spine 1.027
+    400086: spine 1.028
+    400088: spine 1.029
+    400090: spine 1.030
+    400092: spine 1.030_end
+    400094: spine 2
+    400096: spine 3
+    400098: spine 4
+    400100: spine 4.001
+    400102: spine 4.002
+    400104: spine 4.003
+    400106: spine 4.004
+    400108: spine 4.005
+    400110: spine 4.006
+    400112: spine 4.007
+    400114: spine 4.008
+    400116: spine 4.009
+    400118: spine 4.010
+    400120: spine 4.011
+    400122: spine 4.011_end
+    400124: spine 4.012
+    400126: spine 4.012_end
+    4300000: Cube
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

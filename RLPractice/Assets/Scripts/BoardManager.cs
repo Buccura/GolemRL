@@ -11,7 +11,7 @@ public class BoardManager : MonoBehaviour {
 
     public enum propType
     {
-        none,ignore, dood, badguy,item,
+        none,ignore, dood, badguy,item,goal,
     }
 
     public class room
@@ -24,7 +24,7 @@ public class BoardManager : MonoBehaviour {
             x = nX; y = nY; width = w; height = h; roomID = i;
         }
 
-        public void circRoom(tileType[,] g)
+        public void circRoom(tileType[,] g) // This will cut out corners to make the room a different shape than just square or rectangle
         {
             g[x + (width / 2)-1, y + (height / 2)] = tileType.blank;
             g[x + (width / 2)-1, y - (height / 2)+1] = tileType.blank;
@@ -58,9 +58,10 @@ public class BoardManager : MonoBehaviour {
     private propType[,] pGrid; // Grid for the props
     public GameObject wallPiece;
     public GameObject floorPiece;
-    public GameObject[] doodads;
-    public GameObject[] badGuys;
-    public GameObject[] items;
+    public GameObject[] doodads; // Holds all the doodad props
+    public GameObject[] badGuys; // Holds all the types of badguys
+    public GameObject[] items; // Holds all the types of items
+    public GameObject goal; // Holds the goal object
 
     [Range(0.0f,100.0f)]
     public float doodadRatio;
@@ -86,6 +87,9 @@ public class BoardManager : MonoBehaviour {
     System.Random pseudoRandom;
 
     public GameObject wallsParent;
+    public bool dungeonDone;
+
+    
     
 
     void Start()
@@ -114,6 +118,8 @@ public class BoardManager : MonoBehaviour {
         randomConnections();
         Debug.Log("Building walls...");
         buildWalls();
+        Debug.Log("Spawning goal");
+        spawnGoal();
         Debug.Log("Spawning doodads...");
         spawnDoodads();
         Debug.Log("Drawing dungeon...");
@@ -121,16 +127,11 @@ public class BoardManager : MonoBehaviour {
         Debug.Log("Combining wall meshes...");
        // wallsParent.GetComponent<optimizeMeshes>().CombineMeshes();
         Debug.Log("Dungeon drawn.");
+        dungeonDone = true;
+        
         
 
     }
-
-    void Update()
-    {
-
-    }
-
-
 
     void resetBoard()
     {
@@ -147,11 +148,12 @@ public class BoardManager : MonoBehaviour {
     // This is used to draw out the board using the information from the grid array
     void drawBoard() 
     {
+        // This will go through every tile in the grid and create a piece based on what it's labeled as.
         for (int x = 0; x < boardWidth; x++)
         {
-            for (int y = 0; y < boardHeight; y++)
+            for (int y = 0; y < boardHeight; y++) 
             {
-                if(grid[x,y] == tileType.wall)
+                if(grid[x,y] == tileType.wall) 
                 {
                     Vector3 pos = new Vector3((x - (boardWidth/2)), 1, (y - (boardHeight/2)));
                     GameObject wall;
@@ -167,13 +169,21 @@ public class BoardManager : MonoBehaviour {
                     floor = Instantiate(floorPiece, pos, transform.rotation);
                     floor.transform.parent = plane.transform;
                 }
-                if (pGrid[x, y] == propType.dood && doodads.Length != 0)
+                if (pGrid[x, y] == propType.dood && doodads.Length != 0) // This wil create a randomly chosen doodad
                 {
                     Vector3 pos = new Vector3((x - (boardWidth / 2)), 0, (y - (boardHeight / 2)));
                     pos *= 2;
                     GameObject dood;
                     dood = Instantiate(doodads[pseudoRandom.Next(0,doodads.Length)], pos, transform.rotation);
                     dood.transform.parent = plane.transform;
+                }
+                if(pGrid[x,y] == propType.goal)
+                {
+                    Vector3 pos = new Vector3((x - (boardWidth / 2)), 0, (y - (boardHeight / 2)));
+                    pos *= 2;
+                    GameObject goalPos;
+                    goalPos = Instantiate(goal, pos, transform.rotation);
+                    goalPos.transform.parent = plane.transform;
                 }
 
             }
@@ -188,10 +198,11 @@ public class BoardManager : MonoBehaviour {
             int roomWidth = rW;
             int roomHeight = rH;
             // Builds the actual room
-            room newRoom = new room(xC, yC, rW, rH, (maxRooms - numberOfRooms) - 1);
+            room newRoom = new room(xC, yC, rW, rH, (maxRooms - numberOfRooms) );
             
             
             numberOfRooms--;
+            // Creates a room based on the chosen height and width using xC and yC as the center of the room.
             for (int y = (yC + roomHeight/2); y > (yC - roomHeight/2); y--)
             {
                 for (int x = (xC - roomWidth/2); x < (xC + roomWidth/2); x++)
@@ -214,7 +225,7 @@ public class BoardManager : MonoBehaviour {
 
             // For building rooms connected to this one
             int conRooms = 1;
-            int numAttempts = 0;
+            int numAttempts = 0; // This is meant to prevent infinite loops
             if (numberOfRooms >= 4) { conRooms = 4; }
             else { conRooms = numberOfRooms; }
 
@@ -491,6 +502,7 @@ public class BoardManager : MonoBehaviour {
         return true;
     } // end of isRoomClear
 
+    // This creates walls around every floor tile that is blank
     void buildWalls()
     {
         int i = 0;
@@ -516,6 +528,7 @@ public class BoardManager : MonoBehaviour {
     } // End of buildWalls
 
 
+    // Randomly, this will make a room a different shape.
     void tweakRoomShapes()
     {
         foreach(room r in rooms)
@@ -527,6 +540,7 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
+    // This creates additional connections between rooms in an attempt to make the dungeon less linear
     void randomConnections()
     {
         int i = 0;
@@ -632,6 +646,7 @@ public class BoardManager : MonoBehaviour {
 
     } // End of random connections
 
+
     void spawnDoodads()
     {
         foreach(room r in rooms)
@@ -666,6 +681,25 @@ public class BoardManager : MonoBehaviour {
         }
 
     } // End of spawnDoodads
-    
+
+    void spawnGoal()
+    {
+        room endRoom;
+        int rndRoom;
+        if(maxRooms >= 4)
+        {
+            rndRoom = pseudoRandom.Next(maxRooms - 4, maxRooms - 1);
+        }
+        else
+        {
+            rndRoom = pseudoRandom.Next(1, maxRooms - 1);
+        }
+        
+        endRoom = rooms[maxRooms - (1 + rndRoom)];
+        int x, y;
+        x = endRoom.x; y = endRoom.y;
+        pGrid[x, y] = propType.goal;
+
+    }
 
 }
