@@ -85,6 +85,9 @@ public class BoardManager : MonoBehaviour {
     public bool useRandomSeed;
     System.Random pseudoRandom;
 
+    public GameObject wallsParent;
+    
+
     void Start()
     {
         if(useRandomSeed)
@@ -115,8 +118,10 @@ public class BoardManager : MonoBehaviour {
         spawnDoodads();
         Debug.Log("Drawing dungeon...");
         drawBoard();
+        Debug.Log("Combining wall meshes...");
+       // wallsParent.GetComponent<optimizeMeshes>().CombineMeshes();
         Debug.Log("Dungeon drawn.");
-
+        
 
     }
 
@@ -152,7 +157,7 @@ public class BoardManager : MonoBehaviour {
                     GameObject wall;
                     pos *= 2;
                     wall = Instantiate(wallPiece, pos, transform.rotation);
-                    wall.transform.parent = plane.transform;
+                    wall.transform.parent = wallsParent.transform;
                 }
                 if (grid[x, y] == tileType.floor)
                 {
@@ -248,7 +253,14 @@ public class BoardManager : MonoBehaviour {
                                     {
                                         
                                         grid[xC, yC + (rH / 2) + z] = tileType.floor;
+                                        pGrid[xC, yC + (rH / 2) + z] = propType.ignore;
+                                        grid[xC-1, yC + (rH / 2) + z] = tileType.floor;
+                                        grid[xC+1, yC + (rH / 2) + z] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC, yC + (rH / 2) + z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC-1, yC + (rH / 2) + z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + 1, yC + (rH / 2) + z);
                                         floors.Add(newFloor);
 
                                     }
@@ -262,7 +274,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength; z++)
                                     {
                                         grid[xC, yC + (rH / 2) + z] = tileType.floor;
+                                        pGrid[xC, yC + (rH / 2) + z] = propType.ignore;
+                                        grid[xC - 1, yC + (rH / 2) + z] = tileType.floor;
+                                        grid[xC + 1, yC + (rH / 2) + z] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC, yC + (rH / 2) + z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - 1, yC + (rH / 2) + z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + 1, yC + (rH / 2) + z);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.up = true;
@@ -281,7 +300,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength; z++)
                                     {
                                         grid[xC + (rW / 2) + z, yC] = tileType.floor;
+                                        pGrid[xC + (rW / 2) + z, yC] = propType.ignore;
+                                        grid[xC + (rW / 2) + z, yC+1] = tileType.floor;
+                                        grid[xC + (rW / 2) + z, yC-1] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC + (rW / 2) + z, yC);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + (rW / 2) + z, yC+1);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + (rW / 2) + z, yC - 1);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.right = true;
@@ -293,8 +319,16 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength; z++)
                                     {
                                         grid[xC + (rW / 2) + z, yC] = tileType.floor;
+                                        pGrid[xC + (rW / 2) + z, yC] = propType.ignore;
+                                        grid[xC + (rW / 2) + z, yC + 1] = tileType.floor;
+                                        grid[xC + (rW / 2) + z, yC - 1] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC + (rW / 2) + z, yC);
                                         floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + (rW / 2) + z, yC+1);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + (rW / 2) + z, yC - 1);
+                                        floors.Add(newFloor);
+
                                     }
                                     newRoom.right = true;
 
@@ -312,7 +346,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength + 1; z++)
                                     {
                                         grid[xC, yC - (rH / 2) - z] = tileType.floor;
+                                        pGrid[xC, yC - (rH / 2) - z] = propType.ignore;
+                                        grid[xC+1, yC - (rH / 2) - z] = tileType.floor;
+                                        grid[xC-1, yC - (rH / 2) - z] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC, yC - (rH / 2) - z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC-1, yC - (rH / 2) - z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC+1, yC - (rH / 2) - z);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.down = true;
@@ -323,7 +364,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength + 1; z++)
                                     {
                                         grid[xC, yC - (rH / 2) - z] = tileType.floor;
+                                        pGrid[xC, yC - (rH / 2) - z] = propType.ignore;
+                                        grid[xC + 1, yC - (rH / 2) - z] = tileType.floor;
+                                        grid[xC - 1, yC - (rH / 2) - z] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC, yC - (rH / 2) - z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - 1, yC - (rH / 2) - z);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC + 1, yC - (rH / 2) - z);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.down = true;
@@ -342,7 +390,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength; z++)
                                     {
                                         grid[xC - (rW / 2) - z, yC] = tileType.floor;
+                                        pGrid[xC - (rW / 2) - z, yC] = propType.ignore;
+                                        grid[xC - (rW / 2) - z, yC+1] = tileType.floor;
+                                        grid[xC - (rW / 2) - z, yC-1] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC - (rW / 2) - z, yC);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - (rW / 2) - z, yC+1);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - (rW / 2) - z, yC - 1);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.left = true;
@@ -353,7 +408,14 @@ public class BoardManager : MonoBehaviour {
                                     for (int z = 0; z <= cordLength; z++)
                                     {
                                         grid[xC - (rW / 2) - z, yC] = tileType.floor;
+                                        pGrid[xC - (rW / 2) - z, yC] = propType.ignore;
+                                        grid[xC - (rW / 2) - z, yC + 1] = tileType.floor;
+                                        grid[xC - (rW / 2) - z, yC - 1] = tileType.floor;
                                         floorTile newFloor = new floorTile(xC - (rW / 2) - z, yC);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - (rW / 2) - z, yC + 1);
+                                        floors.Add(newFloor);
+                                        newFloor = new floorTile(xC - (rW / 2) - z, yC - 1);
                                         floors.Add(newFloor);
                                     }
                                     newRoom.left = true;
@@ -484,9 +546,16 @@ public class BoardManager : MonoBehaviour {
                         {
                             for (int y = rooms[i].y; y <= rooms[j].y; y++)
                             {
+                                grid[rooms[i].x, y] = tileType.floor;
+                                pGrid[rooms[i].x, y] = propType.ignore;
+                                grid[rooms[i].x, y-1] = tileType.floor;
+                                grid[rooms[i].x, y+1] = tileType.floor;
                                 floorTile newFloor = new floorTile(rooms[i].x, y);
                                 floors.Add(newFloor);
-                                grid[rooms[i].x, y] = tileType.floor;
+                                newFloor = new floorTile(rooms[i].x, y + 1);
+                                floors.Add(newFloor);
+                                newFloor = new floorTile(rooms[i].x, y - 1);
+                                floors.Add(newFloor);
                             }
                             rooms[j].down = true;
                         }
@@ -495,9 +564,17 @@ public class BoardManager : MonoBehaviour {
 
                             for (int y = rooms[i].y; y > rooms[j].y; y--)
                             {
+
+                                grid[rooms[i].x, y] = tileType.floor;
+                                pGrid[rooms[i].x, y] = propType.ignore;
+                                grid[rooms[i].x, y - 1] = tileType.floor;
+                                grid[rooms[i].x, y + 1] = tileType.floor;
                                 floorTile newFloor = new floorTile(rooms[i].x, y);
                                 floors.Add(newFloor);
-                                grid[rooms[i].x, y] = tileType.floor;
+                                newFloor = new floorTile(rooms[i].x, y - 1);
+                                floors.Add(newFloor);
+                                newFloor = new floorTile(rooms[i].x, y + 1);
+                                floors.Add(newFloor);
                             }
                             rooms[j].up = true;
                         }
@@ -512,9 +589,17 @@ public class BoardManager : MonoBehaviour {
                         {
                             for (int x = rooms[i].x; x <= rooms[j].x; x++)
                             {
+
+                                grid[x, rooms[i].y] = tileType.floor;
+                                pGrid[x, rooms[i].y] = propType.ignore;
+                                grid[x-1, rooms[i].y] = tileType.floor;
+                                grid[x+1, rooms[i].y] = tileType.floor;
                                 floorTile newFloor = new floorTile(x, rooms[i].y);
                                 floors.Add(newFloor);
-                                grid[x, rooms[i].y] = tileType.floor;
+                                newFloor = new floorTile(x + 1, rooms[i].y);
+                                floors.Add(newFloor);
+                                newFloor = new floorTile(x - 1, rooms[i].y);
+                                floors.Add(newFloor);
                             }
                             rooms[j].right = true;
                         }
@@ -522,9 +607,17 @@ public class BoardManager : MonoBehaviour {
                         {
                             for (int x = rooms[i].x; x > rooms[j].x; x--)
                             {
+
+                                grid[x, rooms[i].y] = tileType.floor;
+                                pGrid[x, rooms[i].y] = propType.ignore;
+                                grid[x - 1, rooms[i].y] = tileType.floor;
+                                grid[x + 1, rooms[i].y] = tileType.floor;
                                 floorTile newFloor = new floorTile(x, rooms[i].y);
                                 floors.Add(newFloor);
-                                grid[x, rooms[i].y] = tileType.floor;
+                                newFloor = new floorTile(x - 1, rooms[i].y);
+                                floors.Add(newFloor);
+                                newFloor = new floorTile(x + 1, rooms[i].y);
+                                floors.Add(newFloor);
                             }
                             rooms[j].left = true;
                         }
@@ -552,6 +645,20 @@ public class BoardManager : MonoBehaviour {
                         if(pseudoRandom.Next(0,100) <= doodadRatio)
                         {
                             pGrid[x, y] = propType.dood;
+                            for(int xD = x-1; xD <= x+1;xD++) // This will randomly spawn doodads around the one just created
+                            {
+                                for (int yD = y - 1; yD <= y + 1; yD++)
+                                {
+                                    if(grid[xD,yD] == tileType.floor && pGrid[xD,yD] == propType.none)
+                                    {
+                                        if(pseudoRandom.Next(0,100) <= 50)
+                                        {
+                                            pGrid[xD, yD] = propType.dood;
+                                        }
+                                    }
+                                }
+
+                            }
                         }
                     }
                 }
