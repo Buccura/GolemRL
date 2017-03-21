@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿//GolemRL Bullet Object Script
+using UnityEngine;
 
 public class BulletController : MonoBehaviour {
-	public Vector3 bullet_vel;
 	public float lifetime = 4.0f; //Time to live in seconds
+	public Vector3 bullet_vel {get; set;}
 
 	void Start()
 	{	
@@ -13,6 +14,6 @@ public class BulletController : MonoBehaviour {
 		if (lifetime < 0.0f)
 		{	Destroy(gameObject);
 		}
-		transform.Translate(bullet_vel * Time.deltaTime);
+		transform.Translate(bullet_vel*Time.deltaTime);
 	}
 }
