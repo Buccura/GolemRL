@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour {
 	public float lifetime = 4.0f; //Time to live in seconds
-	public Vector3 bullet_vel {get; set;}
+	public Vector3 bullet_vel;
 
 	void Start()
 	{	

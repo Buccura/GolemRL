@@ -1,10 +1,11 @@
 //GolemRL Player Object Script
+//TODO: Check deg/rad issues
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {	public float player_speed = 5.0f; //Move speed
-	public float player_turn_rate = 90.0f; //Turn speed (degrees/sec)
-	public float player_projectile_speed = 50.0f; //Base projectile speed
+	public float player_turn_rate = 180.0f; //Turn speed (degrees/sec)
+	public float player_projectile_speed = 5.0f; //Base projectile speed
 	public GameObject basic_bullet;
 
 	private Vector3 player_vel;
@@ -25,7 +26,22 @@ public class PlayerController : MonoBehaviour
 
         //Aiming
         if (Camera.main != null)
-		{	aim_point = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Pointer location //Actually camera location!
+		{	float d; //Distance to intersection with y-plane
+			float denom; //Dot product of aim_dir and y_norm, denominator in distance equation
+			Ray aim_ray; //Ray from camera though cursor
+			Vector3 y_norm = new Vector3(0.0f,1.0f,0.0f); //Normal vector to y-plane
+			
+			aim_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			denom = Vector3.Dot(aim_ray.direction, y_norm);
+			if (denom != 0.0f) //Not parallel to y-plane
+			{	d = Vector3.Dot(-aim_ray.origin, y_norm) / denom;
+				//d = ([point on plane]-[point on ray] dot y_norm) / ([ray_direction] dot y_norm)
+				aim_point = aim_ray.GetPoint(d); //Intersection point with y-plane
+			}
+			else
+			{	aim_point = transform.forward;
+				Debug.Log ("Warning: Cursor out of bounds!");
+			}
 		}
 		else
 		{	aim_point = transform.forward;
