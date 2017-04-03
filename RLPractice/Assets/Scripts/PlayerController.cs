@@ -1,5 +1,5 @@
 //GolemRL Player Object Script
-//TODO: Bullets at wierd angles
+//TODO: Create separate gun object?
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour

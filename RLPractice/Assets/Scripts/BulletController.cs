@@ -14,6 +14,6 @@ public class BulletController : MonoBehaviour {
 		if (lifetime < 0.0f)
 		{	Destroy(gameObject);
 		}
-		transform.Translate(bullet_vel*Time.deltaTime);
+		transform.Translate(bullet_vel*Time.deltaTime, Space.World);
 	}
 }
