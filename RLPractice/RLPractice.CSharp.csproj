@@ -85,11 +85,18 @@
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\cameraShift.cs" />
+    <Compile Include="Assets\Scripts\cameraWallSeeThru.cs" />
+    <Compile Include="Assets\Scripts\env_floorTile.cs" />
+    <Compile Include="Assets\Scripts\node.cs" />
+    <Compile Include="Assets\Scripts\npc_Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\optimizeMeshes.cs" />
+    <Compile Include="Assets\Scripts\player_CheckCurrentTile.cs" />
     <Compile Include="Assets\Scripts\room.cs" />
-    <Compile Include="Assets\cameraShift.cs" />
-    <Compile Include="Assets\cameraWallSeeThru.cs" />
-    <Compile Include="Assets\optimizeMeshes.cs" />
-    <Compile Include="Assets\testEnemy.cs" />
+    <Compile Include="Assets\Scripts\testEnemy.cs" />
+    <Compile Include="Assets\npc_EnemyMovement.cs" />
+    <Compile Include="Assets\random_Script_Debugging.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

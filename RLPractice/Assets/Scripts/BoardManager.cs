@@ -54,8 +54,9 @@ public class BoardManager : MonoBehaviour {
 
     public int boardHeight;
     public int boardWidth;
-    private tileType[,] grid;  // Grid for the terrain
-    private propType[,] pGrid; // Grid for the props
+    public tileType[,] grid;  // Grid for the terrain
+    public propType[,] pGrid; // Grid for the props
+    public float[,] gridCost; // grid containing the cost data
     public GameObject wallPiece;
     public GameObject floorPiece;
     public GameObject[] doodads; // Holds all the doodad props
@@ -65,7 +66,10 @@ public class BoardManager : MonoBehaviour {
 
     [Range(0.0f,100.0f)]
     public float doodadRatio;
-    
+
+    [Range(0.0f, 100.0f)]
+    public float badGuyRatio;
+
     public int numberOfRooms;
     private int maxRooms;
 
@@ -89,7 +93,9 @@ public class BoardManager : MonoBehaviour {
     public GameObject wallsParent;
     public bool dungeonDone;
 
-    
+    public int playerX, playerY;
+
+    public Dictionary<Vector2,Node> pathfindingGrid;
     
 
     void Start()
@@ -105,6 +111,7 @@ public class BoardManager : MonoBehaviour {
         maxRooms = numberOfRooms;
         grid = new tileType[boardHeight, boardWidth];
         pGrid = new propType[boardHeight, boardWidth];
+        gridCost = new float[boardHeight, boardWidth];
         rooms = new List<room>();
         floors = new List<floorTile>();
         Debug.Log("Prepairing the board...");
@@ -122,10 +129,13 @@ public class BoardManager : MonoBehaviour {
         spawnGoal();
         Debug.Log("Spawning doodads...");
         spawnDoodads();
+     //   Debug.Log("Creating pathfinding database...");
+     //   generatePathFindingGrid();
+     //   generateCostGrid();
+        Debug.Log("Spawning badguys...");
+        spawnBadGuys();
         Debug.Log("Drawing dungeon...");
         drawBoard();
-        Debug.Log("Combining wall meshes...");
-       // wallsParent.GetComponent<optimizeMeshes>().CombineMeshes();
         Debug.Log("Dungeon drawn.");
         dungeonDone = true;
         
@@ -168,6 +178,8 @@ public class BoardManager : MonoBehaviour {
                     GameObject floor;
                     floor = Instantiate(floorPiece, pos, transform.rotation);
                     floor.transform.parent = plane.transform;
+                    floor.GetComponent<env_floorTile>().x = x;
+                    floor.GetComponent<env_floorTile>().y = y;
                 }
                 if (pGrid[x, y] == propType.dood && doodads.Length != 0) // This wil create a randomly chosen doodad
                 {
@@ -177,7 +189,17 @@ public class BoardManager : MonoBehaviour {
                     dood = Instantiate(doodads[pseudoRandom.Next(0,doodads.Length)], pos, transform.rotation);
                     dood.transform.parent = plane.transform;
                 }
-                if(pGrid[x,y] == propType.goal)
+                if (pGrid[x, y] == propType.badguy && badGuys.Length != 0) // This wil create a randomly chosen doodad
+                {
+                    Vector3 pos = new Vector3((x - (boardWidth / 2)), 3, (y - (boardHeight / 2)));
+                    pos *= 2;
+                    GameObject bad;
+                    bad = Instantiate(badGuys[pseudoRandom.Next(0, badGuys.Length)], pos, transform.rotation);
+                    bad.transform.parent = plane.transform;
+//                    bad.GetComponent<npc_Pathfinding>().startX = x;
+  //                  bad.GetComponent<npc_Pathfinding>().startY = y;
+                }
+                if (pGrid[x,y] == propType.goal)
                 {
                     Vector3 pos = new Vector3((x - (boardWidth / 2)), 0, (y - (boardHeight / 2)));
                     pos *= 2;
@@ -682,6 +704,26 @@ public class BoardManager : MonoBehaviour {
 
     } // End of spawnDoodads
 
+    void spawnBadGuys()
+    {
+        foreach (room r in rooms)
+        {
+            for (int x = r.x - (r.width / 2); x <= r.x + (r.width / 2); x++)
+            {
+                for (int y = r.y - (r.height / 2); y <= r.y + (r.height / 2); y++)
+                {
+                    if (grid[x, y] == tileType.floor && pGrid[x, y] == propType.none)
+                    {
+                        if (pseudoRandom.Next(0, 100) <= badGuyRatio)
+                        {
+                            pGrid[x, y] = propType.badguy;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     void spawnGoal()
     {
         room endRoom;
@@ -700,6 +742,79 @@ public class BoardManager : MonoBehaviour {
         x = endRoom.x; y = endRoom.y;
         pGrid[x, y] = propType.goal;
 
+    }
+
+    void generatePathFindingGrid()
+    {
+        pathfindingGrid = new Dictionary<Vector2, Node>();
+
+
+
+        // Initialize each spot in the array
+        for (int x = 0; x < boardWidth; x++)
+        {
+            for (int y = 0; y < boardHeight; y++)
+            {
+                Node newNode = new Node();
+                Vector2 cord = new Vector2(x, y);
+                pathfindingGrid.Add(cord, newNode);
+            }
+        }
+        
+        // Build it's neighbours
+        foreach (Vector2 v in pathfindingGrid.Keys)
+        {
+            if (grid[(int)v.x, (int)v.y] == tileType.floor)
+            {
+                if (grid[(int)v.x -1, (int)v.y] == tileType.floor)
+                {
+
+                    Vector2 key = new Vector2();
+                    key.x = v.x - 1;
+                    key.y = v.y;
+                    pathfindingGrid[v].neighbours.Add(pathfindingGrid[key]);
+
+                }
+                if (grid[(int)v.x + 1, (int)v.y] == tileType.floor)
+                {
+                    Vector2 key = new Vector2();
+                    key.x = v.x + 1;
+                    key.y = v.y;
+                    pathfindingGrid[v].neighbours.Add(pathfindingGrid[key]);
+
+                }
+                if (grid[(int)v.x - 1, (int)v.y-1] == tileType.floor)
+                {
+                    Vector2 key = new Vector2();
+                    key.x = v.x;
+                    key.y = v.y - 1;
+                    pathfindingGrid[v].neighbours.Add(pathfindingGrid[key]);
+                }
+                if (grid[(int)v.x - 1, (int)v.y+1] == tileType.floor)
+                {
+                    Vector2 key = new Vector2();
+                    key.x = v.x;
+                    key.y = v.y + 1;
+                    pathfindingGrid[v].neighbours.Add(pathfindingGrid[key]);
+                }
+            }
+        }
+    }
+
+    public void generateCostGrid()
+    {
+        for (int x = 0; x < boardWidth; x++)
+        {
+            for (int y = 0; y < boardHeight; y++)
+            {
+                gridCost[x, y] = Mathf.Infinity;
+                if (grid[x, y] == tileType.floor && pGrid[x, y] == propType.none)
+                {
+                    gridCost[x, y] = 0f;
+                }
+            }
+
+        }
     }
 
 }
