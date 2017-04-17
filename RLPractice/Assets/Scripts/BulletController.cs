@@ -6,10 +6,10 @@ public class BulletController : MonoBehaviour {
 	public int damage = 0; //Damage in hitpoints
 	public Vector3 bullet_vel;
 
-	//private Rigidbody rb;
+	//private Rigidbody bullet_rb;
 
 	void Start()
-	{	//rb = GetComponent<Rigidbody> ();
+	{	//bullet_rb = GetComponent<Rigidbody>();
 	}
 	
 	void Update()
@@ -20,7 +20,8 @@ public class BulletController : MonoBehaviour {
 		transform.Translate(bullet_vel*Time.deltaTime, Space.World);
 	}
 
-	/*void FixedUpdate()
-	{	rb.velocity = bullet_vel*Time.deltaTime;
-	}*/
+	void FixedUpdate()
+	{	//bullet_rb.velocity = bullet_vel;
+		//Debug.Log(bullet_rb.velocity);
+	}
 }
