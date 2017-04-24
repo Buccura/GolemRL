@@ -1,5 +1,10 @@
 fileFormatVersion: 2
 guid: e4f1fee3de32377429fd1348fae62b10
+<<<<<<< HEAD
+=======
+timeCreated: 1492465330
+licenseType: Free
+>>>>>>> b857502666175a4115261d64e8783c7dac7ca78b
 TextureImporter:
   fileIDToRecycleName:
     21300000: JumpButton

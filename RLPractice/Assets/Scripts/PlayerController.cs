@@ -1,85 +1,192 @@
 //GolemRL Player Object Script
-//TODO: Create separate gun object?
+//TODO:Figure out get/set functions
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{	public bool cam_relative_controls = false;
-	public float player_speed = 5.0f; //Move speed
+{	public bool cam_relative_controls = false; //Player movement relative to camera instead of grid
+	public float player_speed = 5.0f; //Move speed (units/sec)
 	public float player_turn_rate = 180.0f; //Turn speed (degrees/sec)
-	public float player_projectile_speed = 5.0f; //Base projectile speed
-	public GameObject basic_bullet;
+	public float player_gun_speed_mult = 1.0f; //Projectile speed multiplier
+	public float player_gun_rof_mult = 1.0f; //Rate of fire multiplier
+	public GameObject[] player_weapon; //Array of available weapons
 
-	private Vector3 player_vel;
+	private int weapon_slots; //Number of selectable weapons
+	private int selected_weapon = 0; //Value from 0 to weapon_slots-1
+	private Vector3 player_vel; //Velocity vector
+	private Quaternion player_aim; //Desired heading
+	private Rigidbody player_rb; //Physics for player
+	private GunController gun_ctrl; //Script of selected weapon
 
 	void Start()
-	{	
+	{	player_aim = new Quaternion();
+		player_rb = GetComponent<Rigidbody>();
+		weapon_slots = player_weapon.Length;
+		gun_ctrl = player_weapon[selected_weapon].GetComponent<GunController>();
+		gun_ctrl.Select(0.0f);
 	}
 
 	void Update()
-	{	float aim_angle; //The degree angle between the player heading and cursor
-		float turn_angle; //The number of degrees the player will rotate this tick
-		Vector3 aim_point; //Where the cursor is pointing
-		Vector3 aim_vector; //The unit vector from the player to the cursor, desired heading
+	{	Vector3 aim_point; //Where the cursor is pointing
+		Vector3 aim_vector; //A vector from the player to the cursor
 
 		//Movement
 		player_vel.x = Input.GetAxis("Horizontal") * player_speed;
 		player_vel.z = Input.GetAxis("Vertical") * player_speed;
 		if (cam_relative_controls && Camera.main != null) //Rotate movement along y-axis to match camera
-		{	float cos_y = Mathf.Cos( Camera.main.transform.eulerAngles.y*Mathf.Deg2Rad );
-			float sin_y = Mathf.Sin( Camera.main.transform.eulerAngles.y*Mathf.Deg2Rad );
-			float temp_x = player_vel.x;
-			player_vel.x = player_vel.x*cos_y + player_vel.z*sin_y;
-			player_vel.z = player_vel.z*cos_y - temp_x*sin_y;
+		{	Quaternion camera_y_rot = Quaternion.Euler(0.0f, Camera.main.transform.eulerAngles.y, 0.0f);
+			player_vel = camera_y_rot * player_vel; //Rotate velocity by camera y-axis rotation
 		}
 
 		//Aiming
 		if (Camera.main != null)
-		{	float d; //Distance to intersection with y-plane
-			float denom; //Dot product of aim_dir and y_norm, denominator in distance equation
-			Ray aim_ray; //Ray from camera though cursor
-			Vector3 y_norm = new Vector3(0.0f,1.0f,0.0f); //Normal vector to y-plane
+		{	float dist; //Distance to intersection with xz-plane
+			Ray look_ray; //Ray from camera to cursor
+			Plane xz_plane; //Plane where Y=0
 			
-			aim_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			denom = Vector3.Dot(aim_ray.direction, y_norm);
-			if (denom != 0.0f) //Not parallel to y-plane
-			{	d = Vector3.Dot(-aim_ray.origin, y_norm) / denom;
-				//d = ([point on plane]-[point on ray] dot y_norm) / ([ray_direction] dot y_norm)
-				aim_point = aim_ray.GetPoint(d); //Intersection point with y-plane
+			look_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			xz_plane = new Plane(Vector3.up,Vector3.zero);
+			if ( xz_plane.Raycast(look_ray, out dist) ) //If look_ray intersects xz-plane
+			{	aim_point = look_ray.GetPoint(dist); //Intersection point with xz-plane
 			}
 			else
-			{	aim_point = transform.forward;
-				Debug.Log ("Warning: Cursor out of bounds!");
+			{	aim_point = transform.position + transform.forward;
+				Debug.Log("Warning: Cursor out of bounds!");
 			}
 		}
 		else
-		{	aim_point = transform.forward;
-			Debug.Log ("Warning: Main camera not found!");
+		{	aim_point = transform.position + transform.forward;
+			Debug.Log("Warning: Main camera not found!");
 		}
-		Debug.DrawLine(transform.position, aim_point, Color.yellow);
-		Debug.DrawRay(transform.position, transform.forward, Color.green);
 		aim_vector = aim_point - transform.position; //Displacement from player to cursor
 		aim_vector.y = 0.0f; //Nullify y-component
-		aim_vector.Normalize(); //Unit vector of desired heading
-		Debug.DrawRay(transform.position, aim_vector, Color.red);
-		aim_angle = Mathf.Clamp(Vector3.Dot(transform.forward, aim_vector), -1.0f, 1.0f); //Prevent NaN due to rounding error
-		aim_angle = Mathf.Acos(aim_angle); //Angle between heading and desired heading
-		aim_angle *= Mathf.Sign( aim_vector.x*transform.forward.z - aim_vector.z*transform.forward.x ); //Signed angle
-		aim_angle *= Mathf.Rad2Deg; //Desired rotation change in degrees
-		turn_angle = Mathf.Sign(aim_angle) * player_turn_rate * Time.deltaTime; //Maximum possible turn this tick
-		if( Mathf.Abs(aim_angle) < Mathf.Abs(turn_angle) ) //If desired rotation less than maximum
-		{	turn_angle = aim_angle; //Then don't overshoot (prevents shakiness)
+		//aim_vector.Normalize();
+		player_aim = Quaternion.LookRotation(aim_vector); //The heading from player to cursor
+		Debug.DrawLine(transform.position, aim_point, Color.yellow);
+		Debug.DrawRay(transform.position, transform.forward, Color.green);
+		Debug.DrawRay(transform.position, aim_vector.normalized, Color.red);
+
+		HandleCommandInput(); //Various player key input
+	}
+	
+	void FixedUpdate()
+	{	player_rb.velocity = player_vel;
+		player_rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, player_aim, player_turn_rate*Time.deltaTime));
+	}
+
+	bool SwitchWeapon(int weapon_num)
+	{	if ( selected_weapon == weapon_num )
+		{	Debug.Log("Already equipped!");
+			return false;
 		}
-
-		//Update transforms
-		transform.Translate(player_vel.x*Time.deltaTime, 0.0f, player_vel.z*Time.deltaTime, Space.World);
-		transform.Rotate(0.0f, turn_angle, 0.0f);
-
-		//Firing
-		if( Input.GetMouseButtonDown(0) )
-		{	GameObject bullet = Instantiate(basic_bullet, transform.position + transform.forward, transform.rotation);
-			BulletController bullet_ctrl = bullet.GetComponent<BulletController>();
-			bullet_ctrl.bullet_vel = player_vel + transform.forward*player_projectile_speed;
+		if (weapon_num >= 0 && weapon_num < weapon_slots && player_weapon[weapon_num] != null) //Valid weapon
+		{	GunController gc = player_weapon[weapon_num].GetComponent<GunController>();
+			if ( gc.ammo_count >= gc.ammo_cost ) //Enough ammo
+			{	gun_ctrl.Deselect();
+				selected_weapon = weapon_num;
+				gun_ctrl = gc;
+				gun_ctrl.Select(1.0f); //TODO: Replace with proper animation time (swap out + swap in)
+				return true;
+			}
+			else
+			{	Debug.Log("Not enough ammo!");
+				return false;
+			}
+		}
+		else
+		{	Debug.Log("Error: Invalid weapon slot.");
+			return false;
 		}
 	}
-}
+	
+	void NextWeapon() //Switch to next available weapon
+	{	int checked_slot = (selected_weapon+1)%weapon_slots;
+		bool not_found = true;
+		while ( not_found && checked_slot != selected_weapon )
+		{	if ( SwitchWeapon(checked_slot) )
+			{	not_found = false;
+			}
+			else
+			{	checked_slot = (checked_slot+1)%weapon_slots;
+			}
+		}
+	}
+	
+	void PrevWeapon() //Switch to previous available weapon
+	{	int checked_slot = (selected_weapon-1+weapon_slots)%weapon_slots;
+		bool not_found = true;
+		while ( not_found && checked_slot != selected_weapon )
+		{	if ( SwitchWeapon(checked_slot) )
+			{	not_found = false;
+			}
+			else
+			{	checked_slot = (checked_slot-1+weapon_slots)%weapon_slots;
+			}
+		}
+	}
 
+	private void HandleCommandInput() //Various player input
+	{	//Firing
+		if ( Input.GetButtonDown("Fire1") )
+		{	gun_ctrl.active_muzzle = 0; //Start at first muzzle for first shot
+			gun_ctrl.speed_mult = player_gun_speed_mult;
+			gun_ctrl.rof_mult = player_gun_rof_mult;
+			if (gun_ctrl.ammo_count < gun_ctrl.ammo_cost)
+			{	Debug.Log("Out of ammo! Switching to default weapon.");
+				SwitchWeapon(0);
+			}
+		}
+		if ( Input.GetButton("Fire1") && gun_ctrl.FireReady() )
+		{	gun_ctrl.Fire(player_vel);
+			/*//Angular velocity is insignificant for now
+			float delta_t = Time.deltaTime;
+			Quaternion end_rotation = Quaternion.RotateTowards(transform.rotation, player_aim, player_turn_rate*delta_t);
+			float delta_angle = RotationDeltaAngle(transform.rotation, end_rotation);
+			gun_ctrl.FireWithAngular(player_vel, transform.position, delta_angle, delta_t);*/
+		}
+		//Switching Weapons
+		if ( Input.GetButtonDown("WeapNext") || Input.GetAxisRaw("Mouse ScrollWheel") > 0 )
+		{	NextWeapon();
+		}
+		else if ( Input.GetButtonDown("WeapPrev") || Input.GetAxisRaw("Mouse ScrollWheel") < 0 )
+		{	PrevWeapon();
+		}
+		else if ( Input.GetButtonDown("Weap1") )
+		{	SwitchWeapon(0);
+		}
+		else if ( Input.GetButtonDown("Weap2") )
+		{	SwitchWeapon(1);
+		}
+		else if ( Input.GetButtonDown("Weap3") )
+		{	SwitchWeapon(2);
+		}
+		else if ( Input.GetButtonDown("Weap4") )
+		{	SwitchWeapon(3);
+		}
+		else if ( Input.GetButtonDown("Weap5") )
+		{	SwitchWeapon(4);
+		}
+		else if ( Input.GetButtonDown("Weap6") )
+		{	SwitchWeapon(5);
+		}
+		else if ( Input.GetButtonDown("Weap7") )
+		{	SwitchWeapon(6);
+		}
+		else if ( Input.GetButtonDown("Weap8") )
+		{	SwitchWeapon(7);
+		}
+		else if ( Input.GetButtonDown("Weap9") )
+		{	SwitchWeapon(8);
+		}
+		else if ( Input.GetButtonDown("Weap10") )
+		{	SwitchWeapon(9);
+		}
+	}
+
+	/*private float RotationDeltaAngle(Quaternion before, Quaternion after) //Signed angle between two rotations (in degrees)
+	{	Vector3 vect_a = after * Vector3.forward;
+		Vector3 vect_b = before * Vector3.forward;
+		float angle_a = Mathf.Atan2(vect_a.x, vect_a.z) * Mathf.Rad2Deg;
+		float angle_b = Mathf.Atan2(vect_b.x, vect_b.z) * Mathf.Rad2Deg;
+		return Mathf.DeltaAngle(angle_a, angle_b);
+	}*/
+}
