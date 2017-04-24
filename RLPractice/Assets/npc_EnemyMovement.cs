@@ -15,7 +15,11 @@ public class npc_EnemyMovement : MonoBehaviour {
     public float spotDistance;
 
     public float speed;
-	
+
+    public float angerTimerSet;
+    private float angerTimer = 0;
+    public bool isAngry;
+
 	void Start()
 	{
         spotDistance = 30f;
@@ -40,6 +44,15 @@ public class npc_EnemyMovement : MonoBehaviour {
 
         if (sawPlayer)
         {
+            if(angerTimer <= angerTimerSet && !isAngry)
+            {
+                angerTimer += Time.deltaTime;
+            }
+            else if(angerTimer > angerTimerSet && !isAngry)
+            {
+                isAngry = true;
+                maskWithDoodads = maskIgnoreDoodads;
+            }
             RaycastHit hit2;
             
             if (Physics.Raycast(transform.position, raycastDir, out hit2,100f, maskWithDoodads))

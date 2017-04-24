@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoardManager.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
@@ -95,7 +96,10 @@
     <Compile Include="Assets\Scripts\player_CheckCurrentTile.cs" />
     <Compile Include="Assets\Scripts\room.cs" />
     <Compile Include="Assets\Scripts\testEnemy.cs" />
+    <Compile Include="Assets\bullet_Mover.cs" />
+    <Compile Include="Assets\npc_CrashThroughDoodads.cs" />
     <Compile Include="Assets\npc_EnemyMovement.cs" />
+    <Compile Include="Assets\npc_Shooting.cs" />
     <Compile Include="Assets\random_Script_Debugging.cs" />
   </ItemGroup>
   <ItemGroup>

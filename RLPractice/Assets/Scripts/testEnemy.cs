@@ -19,10 +19,7 @@ public class testEnemy : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            navAgent.destination = player.transform.position;
-        }
+
         
     }
 }
