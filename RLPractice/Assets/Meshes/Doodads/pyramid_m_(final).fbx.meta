@@ -1,11 +1,5 @@
 fileFormatVersion: 2
 guid: 8602f0b65822b014385144c0f99a2696
-<<<<<<< HEAD
-timeCreated: 1488234820
-=======
-timeCreated: 1492465335
->>>>>>> b857502666175a4115261d64e8783c7dac7ca78b
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -18,6 +12,7 @@ ModelImporter:
     2300000: Cube
     3300000: Cube
     4300000: Cube
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -28,11 +23,6 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-<<<<<<< HEAD
-=======
-    rigImportErrors: 
-    rigImportWarnings: 
->>>>>>> b857502666175a4115261d64e8783c7dac7ca78b
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -47,7 +37,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -85,7 +75,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
