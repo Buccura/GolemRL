@@ -41,37 +41,15 @@ public class GunController : MonoBehaviour
 
 	public void Fire(Vector3 player_velocity)
 	{	if ( fire_counter <= 0.0f && ammo_count >= ammo_cost )
-		{	float spread; //Random angle for bullet
-			Vector3 trajectory; //Firing vector subject to spread
-			fire_counter = fire_cooldown; //Reset cooldown
+		{	fire_counter = fire_cooldown; //Reset cooldown
 			ammo_count -= ammo_cost; //Subtract ammo
 			if (muzzle_in_order) //Single bullet
-			{	GameObject bullet = Instantiate(gun_projectile, muzzle_tf[active_muzzle].position, muzzle_tf[active_muzzle].rotation);
-				BulletController bullet_ctrl = bullet.GetComponent<BulletController>();
-				trajectory = muzzle_tf[active_muzzle].forward;
-				if (spread_deg > 0.0f)
-				{	spread = Random.Range(-spread_deg,spread_deg); //Random angle in spread arc
-					trajectory = Quaternion.AngleAxis(spread, muzzle_tf[active_muzzle].up) * trajectory; //Rotate trajectory along y-axis
-					Debug.DrawRay(muzzle_tf[active_muzzle].position,Quaternion.AngleAxis(-spread_deg, muzzle_tf[active_muzzle].up) * muzzle_tf[active_muzzle].forward*5, Color.blue,fire_cooldown/rof_mult);
-					Debug.DrawRay(muzzle_tf[active_muzzle].position,Quaternion.AngleAxis(spread_deg, muzzle_tf[active_muzzle].up) * muzzle_tf[active_muzzle].forward*5, Color.blue,fire_cooldown/rof_mult);
-				}
-				Debug.DrawRay(muzzle_tf[active_muzzle].position,trajectory*5, Color.magenta,fire_cooldown/rof_mult);
-				bullet_ctrl.bullet_vel = player_velocity + muzzle_velocity*speed_mult*trajectory;
+			{	Spawn_Projectile(player_velocity, active_muzzle);
 				active_muzzle = (active_muzzle+1)%muzzle_count; //Switch to next muzzle
 			}
 			else //Multiple bullets
 			{	for (int i = 0; i < muzzle_count; i++)
-				{	GameObject bullet = Instantiate(gun_projectile, muzzle_tf[i].position, muzzle_tf[i].rotation);
-					BulletController bullet_ctrl = bullet.GetComponent<BulletController>();
-					trajectory = muzzle_tf[i].forward;
-					if (spread_deg > 0.0f)
-					{	spread = Random.Range(-spread_deg,spread_deg); //Random angle in spread arc
-						trajectory = Quaternion.AngleAxis(spread, muzzle_tf[i].up) * trajectory; //Rotate trajectory along y-axis
-						Debug.DrawRay(muzzle_tf[i].position,Quaternion.AngleAxis(-spread_deg, muzzle_tf[i].up) * muzzle_tf[i].forward*5, Color.blue,fire_cooldown/rof_mult);
-						Debug.DrawRay(muzzle_tf[i].position,Quaternion.AngleAxis(spread_deg, muzzle_tf[i].up) * muzzle_tf[i].forward*5, Color.blue,fire_cooldown/rof_mult);
-					}
-					Debug.DrawRay(muzzle_tf[i].position,trajectory*5, Color.magenta,fire_cooldown/rof_mult);
-					bullet_ctrl.bullet_vel = player_velocity + muzzle_velocity*speed_mult*trajectory;
+				{	Spawn_Projectile(player_velocity, i);
 				}
 			}
 		}
@@ -128,5 +106,21 @@ public class GunController : MonoBehaviour
 		foreach( Renderer r in child_renderers )
 		{	r.enabled = true;
 		}
+	}
+
+	private void Spawn_Projectile(Vector3 player_velocity, int muzzle_num)
+	{	float spread; //Random angle for bullet
+		GameObject bullet = Instantiate(gun_projectile, muzzle_tf[muzzle_num].position, muzzle_tf[muzzle_num].rotation);
+		BulletController bullet_ctrl = bullet.GetComponent<BulletController>();
+		bullet_ctrl.owner = transform.parent.gameObject; //Unit holding gun
+		Vector3 trajectory = muzzle_tf[muzzle_num].forward; //Firing vector subject to spread
+		if (spread_deg > 0.0f)
+		{	spread = Random.Range(-spread_deg,spread_deg); //Random angle in spread arc
+			trajectory = Quaternion.AngleAxis(spread, muzzle_tf[muzzle_num].up) * trajectory; //Rotate trajectory along y-axis
+			Debug.DrawRay(muzzle_tf[muzzle_num].position,Quaternion.AngleAxis(-spread_deg, muzzle_tf[muzzle_num].up) * muzzle_tf[muzzle_num].forward*5, Color.blue,fire_cooldown/rof_mult);
+			Debug.DrawRay(muzzle_tf[muzzle_num].position,Quaternion.AngleAxis(spread_deg, muzzle_tf[muzzle_num].up) * muzzle_tf[muzzle_num].forward*5, Color.blue,fire_cooldown/rof_mult);
+		}
+		Debug.DrawRay(muzzle_tf[muzzle_num].position,trajectory*5, Color.magenta,fire_cooldown/rof_mult);
+		bullet_ctrl.bullet_vel = player_velocity + muzzle_velocity*speed_mult*trajectory;
 	}
 }
