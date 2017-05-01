@@ -165,7 +165,7 @@ public class BoardManager : MonoBehaviour {
             {
                 if(grid[x,y] == tileType.wall) 
                 {
-                    Vector3 pos = new Vector3((x - (boardWidth/2)), 1, (y - (boardHeight/2)));
+                    Vector3 pos = new Vector3((x - (boardWidth/2)), 0f, (y - (boardHeight/2)));
                     GameObject wall;
                     pos *= 2;
                     wall = Instantiate(wallPiece, pos, transform.rotation);

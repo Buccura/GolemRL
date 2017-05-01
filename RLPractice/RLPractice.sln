@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
@@ -31,37 +30,3 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
-=======
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLPractice.Plugins", "RLPractice.Plugins.csproj", "{35FC27BA-E97C-89CF-21BD-1FD8E9AAF6E8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLPractice", "RLPractice.csproj", "{1BFFD578-71B9-6E3A-334F-82A481CD7B23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLPractice.Editor.Plugins", "RLPractice.Editor.Plugins.csproj", "{7B1986AF-F6C6-0A23-CA1E-BE39D687B560}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35FC27BA-E97C-89CF-21BD-1FD8E9AAF6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35FC27BA-E97C-89CF-21BD-1FD8E9AAF6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35FC27BA-E97C-89CF-21BD-1FD8E9AAF6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35FC27BA-E97C-89CF-21BD-1FD8E9AAF6E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BFFD578-71B9-6E3A-334F-82A481CD7B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BFFD578-71B9-6E3A-334F-82A481CD7B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BFFD578-71B9-6E3A-334F-82A481CD7B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BFFD578-71B9-6E3A-334F-82A481CD7B23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B1986AF-F6C6-0A23-CA1E-BE39D687B560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B1986AF-F6C6-0A23-CA1E-BE39D687B560}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B1986AF-F6C6-0A23-CA1E-BE39D687B560}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B1986AF-F6C6-0A23-CA1E-BE39D687B560}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
->>>>>>> 7d3f035cd62f5a57336ec372134fc9d9e9db02d6
