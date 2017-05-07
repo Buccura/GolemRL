@@ -1,6 +1,5 @@
 //GolemRL Gun Object Script
 using UnityEngine;
-using UnityEditor;
 
 public class GunController : MonoBehaviour
 {	public GameObject gun_projectile; //Type of bullet
