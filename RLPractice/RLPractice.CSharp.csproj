@@ -88,7 +88,9 @@
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\GunController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PowerupScript.cs" />
+    <Compile Include="Assets\Scripts\PowerupBonusScript.cs" />
+    <Compile Include="Assets\Scripts\PowerupMoveSpeed.cs" />
+    <Compile Include="Assets\Scripts\PowerupObjectScript.cs" />
     <Compile Include="Assets\Scripts\cameraShift.cs" />
     <Compile Include="Assets\Scripts\cameraWallSeeThru.cs" />
     <Compile Include="Assets\Scripts\env_floorTile.cs" />

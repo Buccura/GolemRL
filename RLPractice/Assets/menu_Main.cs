@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class menu_Main : MonoBehaviour {
 
     public Button start, exit;
-
+  
     void Start()
     {
         Debug.Log(start.transform.position);
@@ -15,7 +15,7 @@ public class menu_Main : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame()

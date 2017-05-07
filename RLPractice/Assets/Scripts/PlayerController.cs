@@ -1,5 +1,4 @@
 //GolemRL Player Object Script
-//TODO:Figure out get/set functions
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour

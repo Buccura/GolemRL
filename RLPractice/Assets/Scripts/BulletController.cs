@@ -4,9 +4,12 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 	public bool piercing = false; //Bullet only stops for walls
 	public bool destroy_on_impact = true; //Bulled destroyed instead of stopping
+	public bool damage_when_hit = false; //Can be destroyed by other projectiles
 	public float lifetime = 4.0f; //Time to live in seconds
 	public int damage = 0; //Damage in hitpoints
-	public Vector3 bullet_vel;
+	public int hitpoints = 0; //Hitpoints if can be damaged
+	public Vector3 bullet_vel; //Trajectory of bullet
+	public GameObject owner; //Unit that fired projectile
 
 	//private Rigidbody bullet_rb;
 
@@ -47,18 +50,46 @@ public class BulletController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) //Trigger collision
 	{	GameObject target;
 		target = other.gameObject;
-		if (target != null && target.name != "Player" && target.name != "Bullet(Clone)")
-		{	Debug.Log(target);
-			if (target.name == "WallPiece(Clone)")
+		if (target != null && target.tag != "Floor")
+		{	Debug.Log(target.tag);
+			if (target.tag == "Wall")
 			{	bullet_vel = Vector3.zero;
 				if (destroy_on_impact)
 				{	Destroy(gameObject);
 				}
 			}
-			else if (!piercing)
-			{	bullet_vel = Vector3.zero;
-				if (destroy_on_impact)
+			else if (target.tag == "Destructable") //Destructable doodads
+			{	//Damage doodad
+				if (!piercing)
 				{	Destroy(gameObject);
+				}
+			}
+			else if (target.tag == "Enemy")
+			{	if (owner == null || owner.tag != "Enemy")
+				{	//Damage enemy
+					if (owner != null && owner.tag == "Player")
+					{	//Add damage to score
+					}
+					if (!piercing)
+					{	Destroy(gameObject);
+					}
+				}
+			}
+			else if (target.tag == "Player")
+			{	if (owner == null || owner.tag != "Player")
+				{	//Damage player
+					if (!piercing)
+					{	Destroy(gameObject);
+					}
+				}
+			}
+			else if (target.tag == "Projectile")
+			{	BulletController target_ctrl = target.GetComponent<BulletController>();
+				if (target_ctrl.damage_when_hit && (owner == null || target_ctrl.owner == null || target_ctrl.owner.tag != owner.tag) ) //Avoid friendly fire
+				{	Destroy(target);
+					if (damage_when_hit)
+					{	Destroy(gameObject);
+					}
 				}
 			}
 		}
