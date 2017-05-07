@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             //anim.SetFloat("WalkForward", 0f);
         }
        // Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-       float moveAngle = Mathf.Abs((180f * transform.rotation.y) - Mathf.Atan2(player_vel.z, player_vel.x) * Mathf.Rad2Deg);
+       float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
         Debug.Log(moveAngle);
         if(moveAngle < 45)
         {

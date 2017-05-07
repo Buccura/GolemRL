@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 727267eb2ec73904dbe982834f05aaf5
+timeCreated: 1494195472
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bicep.L
+    100004: Bicep.R
+    100006: //RootNode
+    100008: Camera
+    100010: chest
+    100012: feet.L
+    100014: feet.L_end
+    100016: feet.R
+    100018: feet.R_end
+    100020: forearm.L
+    100022: forearm.R
+    100024: Hand.L
+    100026: Hand.R
+    100028: head
+    100030: head_end
+    100032: Hips
+    100034: index base.L
+    100036: index base.R
+    100038: index Bridge.L
+    100040: index Bridge.R
+    100042: index Palm.L
+    100044: index Palm.R
+    100046: index Tip.L
+    100048: index Tip.L_end
+    100050: index Tip.R
+    100052: index Tip.R_end
+    100054: Lamp.001
+    100056: Lamp.002
+    100058: Lamp.003
+    100060: Lamp.004
+    100062: Lamp.005
+    100064: Lamp.006
+    100066: Lamp.007
+    100068: leg control.L
+    100070: leg control.R
+    100072: middle base.L
+    100074: middle base.R
+    100076: middle Bridge.L
+    100078: middle Bridge.R
+    100080: middle Palm.L
+    100082: middle Palm.R
+    100084: middle tip.L
+    100086: middle tip.L_end
+    100088: middle tip.R
+    100090: middle tip.R_end
+    100092: pinky Base.L
+    100094: pinky Base.R
+    100096: Pinky bridge.L
+    100098: Pinky bridge.R
+    100100: pinky palm.L
+    100102: pinky palm.R
+    100104: pinky tip.L
+    100106: pinky tip.L_end
+    100108: pinky tip.R
+    100110: pinky tip.R_end
+    100112: Plane
+    100114: shin ik.L
+    100116: shin ik.L_end
+    100118: shin ik.R
+    100120: shin ik.R_end
+    100122: shin pole.L
+    100124: shin pole.L_end
+    100126: shin pole.R
+    100128: shin pole.R_end
+    100130: Shin.L
+    100132: Shin.L_end
+    100134: Shin.R
+    100136: Shin.R_end
+    100138: thigh.L
+    100140: thigh.R
+    100142: thumb Base.L
+    100144: thumb Base.R
+    100146: thumb Bridge.L
+    100148: thumb Bridge.R
+    100150: thumb Palm.L
+    100152: thumb Palm.R
+    100154: thumb Tip.L
+    100156: thumb Tip.L_end
+    100158: thumb Tip.R
+    100160: thumb Tip.R_end
+    100162: waist
+    400000: Armature
+    400002: Bicep.L
+    400004: Bicep.R
+    400006: //RootNode
+    400008: Camera
+    400010: chest
+    400012: feet.L
+    400014: feet.L_end
+    400016: feet.R
+    400018: feet.R_end
+    400020: forearm.L
+    400022: forearm.R
+    400024: Hand.L
+    400026: Hand.R
+    400028: head
+    400030: head_end
+    400032: Hips
+    400034: index base.L
+    400036: index base.R
+    400038: index Bridge.L
+    400040: index Bridge.R
+    400042: index Palm.L
+    400044: index Palm.R
+    400046: index Tip.L
+    400048: index Tip.L_end
+    400050: index Tip.R
+    400052: index Tip.R_end
+    400054: Lamp.001
+    400056: Lamp.002
+    400058: Lamp.003
+    400060: Lamp.004
+    400062: Lamp.005
+    400064: Lamp.006
+    400066: Lamp.007
+    400068: leg control.L
+    400070: leg control.R
+    400072: middle base.L
+    400074: middle base.R
+    400076: middle Bridge.L
+    400078: middle Bridge.R
+    400080: middle Palm.L
+    400082: middle Palm.R
+    400084: middle tip.L
+    400086: middle tip.L_end
+    400088: middle tip.R
+    400090: middle tip.R_end
+    400092: pinky Base.L
+    400094: pinky Base.R
+    400096: Pinky bridge.L
+    400098: Pinky bridge.R
+    400100: pinky palm.L
+    400102: pinky palm.R
+    400104: pinky tip.L
+    400106: pinky tip.L_end
+    400108: pinky tip.R
+    400110: pinky tip.R_end
+    400112: Plane
+    400114: shin ik.L
+    400116: shin ik.L_end
+    400118: shin ik.R
+    400120: shin ik.R_end
+    400122: shin pole.L
+    400124: shin pole.L_end
+    400126: shin pole.R
+    400128: shin pole.R_end
+    400130: Shin.L
+    400132: Shin.L_end
+    400134: Shin.R
+    400136: Shin.R_end
+    400138: thigh.L
+    400140: thigh.R
+    400142: thumb Base.L
+    400144: thumb Base.R
+    400146: thumb Bridge.L
+    400148: thumb Bridge.R
+    400150: thumb Palm.L
+    400152: thumb Palm.R
+    400154: thumb Tip.L
+    400156: thumb Tip.L_end
+    400158: thumb Tip.R
+    400160: thumb Tip.R_end
+    400162: waist
+    4300000: Plane
+    7400000: Armature|idle
+    7400002: Armature|strafe left
+    7400004: Armature|strafe right
+    7400006: Armature|walk back cycle
+    7400008: Armature|walk back cycle.
+    7400010: Armature|walk cycle
+    9500000: //RootNode
+    13700000: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
