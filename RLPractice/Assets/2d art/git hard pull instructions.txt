@@ -1,0 +1,6 @@
+first, make sure your changes are saved and committed.
+then
+git branch [name]// to save your commits
+(makes sure you're still on master)
+git fetch --all
+git reset origin/master
