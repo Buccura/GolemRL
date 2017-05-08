@@ -176,6 +176,9 @@ ModelImporter:
     7400006: Armature|walk back cycle
     7400008: Armature|walk back cycle.
     7400010: Armature|walk cycle
+    7400012: Armature|NOTHING
+    7400014: Armature|NOTHING.001
+    7400016: Armature|NOTHING1
     9500000: //RootNode
     13700000: Plane
   materials:

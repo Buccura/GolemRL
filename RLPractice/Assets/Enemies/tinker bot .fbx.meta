@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 6d3d7cfc4acbf404ebc102453efc374f
-timeCreated: 1494208598
-licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -67,7 +65,9 @@ ModelImporter:
     3300000: Cylinder.001
     4300000: Cylinder
     4300002: Cylinder.001
-    7400000: Armature|WALK
+    7400000: Armature|ArmatureAction
+    7400002: Armature|IDLE
+    7400004: Armature|WALK
     9500000: //RootNode
     13700000: Cylinder
   materials:
@@ -94,7 +94,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

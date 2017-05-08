@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 19e2be6f33597984ca9fe27fa3bca67a
 timeCreated: 1494208592
+=======
+guid: e0c243823ed92b346a31fdd196ff99c9
+timeCreated: 1494197522
+>>>>>>> myshit
 licenseType: Free
 NativeFormatImporter:
   userData: 
