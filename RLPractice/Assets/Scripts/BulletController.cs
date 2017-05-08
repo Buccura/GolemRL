@@ -4,7 +4,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 	public bool piercing = false; //Bullet only stops for walls
 	public bool destroy_on_impact = true; //Bulled destroyed instead of stopping
-	public bool damage_when_hit = false; //Can be destroyed by other projectiles
+	public bool take_damage = false; //Can be destroyed by other projectiles
 	public float lifetime = 4.0f; //Time to live in seconds
 	public int damage = 0; //Damage in hitpoints
 	public int hitpoints = 0; //Hitpoints if can be damaged
@@ -85,9 +85,9 @@ public class BulletController : MonoBehaviour {
 			}
 			else if (target.tag == "Projectile")
 			{	BulletController target_ctrl = target.GetComponent<BulletController>();
-				if (target_ctrl.damage_when_hit && (owner == null || target_ctrl.owner == null || target_ctrl.owner.tag != owner.tag) ) //Avoid friendly fire
+				if (target_ctrl.take_damage && (owner == null || target_ctrl.owner == null || target_ctrl.owner.tag != owner.tag) ) //Avoid friendly fire
 				{	Destroy(target);
-					if (damage_when_hit)
+					if (take_damage)
 					{	Destroy(gameObject);
 					}
 				}

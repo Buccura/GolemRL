@@ -5,14 +5,20 @@ using UnityEngine;
 public class PowerupMoveSpeed : PowerupBonusScript
 {	private PlayerController movement_script;
 
-	public override void Start()
-	{	movement_script = gameObject.GetComponent<PlayerController>();
-		movement_script.player_speed *= strength;
-		base.Start();
+	public override void Begin() //Initiate this buff
+	{	base.Begin();
+		if (owner != null)
+		{	movement_script = owner.GetComponent<PlayerController>();
+			if (movement_script != null)
+			{	movement_script.player_speed *= strength;
+			}
+		}
 	}
 
 	public override void End() //Terminate this buff
-	{	movement_script.player_speed /= strength;
+	{	if (movement_script != null)
+		{	movement_script.player_speed /= strength;
+		}
 		base.End();
 	}
 }

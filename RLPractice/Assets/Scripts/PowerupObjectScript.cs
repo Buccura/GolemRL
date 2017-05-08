@@ -5,12 +5,17 @@ public class PowerupObjectScript : MonoBehaviour
 {	public bool timeout = false; //Despawns after lifetime expires
 	public float lifetime = 60.0f; //Time to live in seconds
 	public float spin_rate = 15.0f; //Counter-clockwise spin (deg/sec)
-	public GameObject bonus_prefab; //Prefab with powerup bonus script to attach to the unit
 
-	private PowerupBonusScript bonus_script; //Script that handles buff
+	public GameObject[] powerup_bonuses; //Powerups to give to unit
 
 	void Start()
-	{	bonus_script = bonus_prefab.GetComponent<PowerupBonusScript>();
+	{	PowerupBonusScript[] bonuses = GetComponentsInChildren<PowerupBonusScript>();
+		if (bonuses.Length > 0)
+		{	powerup_bonuses = new GameObject[bonuses.Length];
+			for(int i = 0; i < bonuses.Length; i++)
+			{	powerup_bonuses[i] = bonuses[i].gameObject;
+			}
+		}
 	}
 
 	void Update()
@@ -31,33 +36,38 @@ public class PowerupObjectScript : MonoBehaviour
 		target = other.gameObject;
 		if (target.tag == "Player")
 		{	Debug.Log("Powerup!");
-			GrantPowerupBonus(target, bonus_script);
+			if (powerup_bonuses != null)
+			{	for(int i = 0; i < powerup_bonuses.Length; i++)
+				{	GrantPowerupBonus(target, powerup_bonuses[i]);
+				}
+			}
 			Destroy(gameObject);
 		}
 	}
 
-	void GrantPowerupBonus(GameObject unit, PowerupBonusScript powerup)
+	void GrantPowerupBonus(GameObject unit, GameObject powerup_type)
 	{	float stren = 0.0f;
-		float dur = 0.0f;
+		float max_dur = 0.0f;
 		float remain = 0.0f;
-		PowerupBonusScript[] buffs = unit.GetComponents<PowerupBonusScript>();
+		PowerupBonusScript powerup = powerup_type.GetComponent<PowerupBonusScript>();
+		PowerupBonusScript[] buffs = unit.GetComponentsInChildren<PowerupBonusScript>();
 		foreach( PowerupBonusScript buff in buffs )
 		{	if ( buff.bonus_type == powerup.bonus_type )
 			{	stren = buff.strength;
-				dur = buff.duration;
+				max_dur = buff.max_duration;
 				remain = buff.lifetime;
 				buff.End();
 				break;
 			}
 		}
-		PowerupBonusScript new_buff = unit.AddComponent<PowerupBonusScript>();
-		new_buff = powerup;
+		GameObject new_powerup = Instantiate(powerup_type,unit.transform);
+		PowerupBonusScript new_buff = new_powerup.GetComponent<PowerupBonusScript>();
 		if (new_buff.strength < stren ) //Inferior bonuses recover duration
 		{	new_buff.strength = stren;
-			new_buff.lifetime += remain;
-			if (new_buff.lifetime > dur)
-			{	new_buff.lifetime = dur;
-			}
+			new_buff.max_duration = max_dur;
+			new_buff.duration += remain;
 		}
+		new_buff.Begin();
+		Debug.Log(new_buff);
 	}
 }

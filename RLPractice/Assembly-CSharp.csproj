@@ -46,10 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\BoardManager.cs" />
      <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PowerupBonusScript.cs" />
@@ -64,11 +65,15 @@
      <Compile Include="Assets\Scripts\player_CheckCurrentTile.cs" />
      <Compile Include="Assets\Scripts\room.cs" />
      <Compile Include="Assets\Scripts\testEnemy.cs" />
+     <Compile Include="Assets\animControl_Brock.cs" />
      <Compile Include="Assets\bullet_Mover.cs" />
+     <Compile Include="Assets\env_Wall.cs" />
+     <Compile Include="Assets\menu_Main.cs" />
      <Compile Include="Assets\npc_CrashThroughDoodads.cs" />
      <Compile Include="Assets\npc_EnemyMovement.cs" />
      <Compile Include="Assets\npc_Shooting.cs" />
      <Compile Include="Assets\random_Script_Debugging.cs" />
+     <None Include="Assets\2d art\git hard pull instructions.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

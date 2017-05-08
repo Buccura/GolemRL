@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 	public float player_gun_speed_mult = 1.0f; //Projectile speed multiplier
 	public float player_gun_rof_mult = 1.0f; //Rate of fire multiplier
 	public GameObject[] player_weapon; //Array of available weapons
+	public Animator anim;
 
 	private int weapon_slots; //Number of selectable weapons
 	private int selected_weapon = 0; //Value from 0 to weapon_slots-1
@@ -15,8 +16,6 @@ public class PlayerController : MonoBehaviour
 	private Quaternion player_aim; //Desired heading
 	private Rigidbody player_rb; //Physics for player
 	private GunController gun_ctrl; //Script of selected weapon
-
-    public Animator anim;
 
 	void Start()
 	{	player_aim = new Quaternion();
@@ -38,35 +37,35 @@ public class PlayerController : MonoBehaviour
 			player_vel = camera_y_rot * player_vel; //Rotate velocity by camera y-axis rotation
 		}
 
-        // Animation Controls
-        if(player_vel.x != 0 || player_vel.z != 0)
-        {
-            //anim.SetFloat("WalkForward", 1f);
-            anim.SetBool("isWalking", true);
-        }
-        else
-        {
-            anim.SetBool("isWalking", false);
-            //anim.SetFloat("WalkForward", 0f);
-        }
-       // Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-       float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
-        Debug.Log(moveAngle);
-        if(moveAngle < 45)
-        {
-            anim.SetBool("walkForward", true);
-            anim.SetBool("walkBackward", false);
-        }
-        else if(moveAngle > 110)
-        {
-            anim.SetBool("walkForward", false);
-            anim.SetBool("walkBackward", true);
-        }
-        else
-        {
-            anim.SetBool("walkForward", false);
-            anim.SetBool("walkBackward", false);
-        }
+		// Animation Controls
+		if (anim != null)
+		{	if(player_vel.x != 0 || player_vel.z != 0)
+			{	//anim.SetFloat("WalkForward", 1f);
+				anim.SetBool("isWalking", true);
+			}
+			else
+			{	anim.SetBool("isWalking", false);
+				//anim.SetFloat("WalkForward", 0f);
+			}
+			// Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
+			float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
+			Debug.Log(moveAngle);
+			if(moveAngle < 45)
+			{	anim.SetBool("walkForward", true);
+				anim.SetBool("walkBackward", false);
+			}
+			else if(moveAngle > 110)
+			{	anim.SetBool("walkForward", false);
+				anim.SetBool("walkBackward", true);
+			}
+			else
+			{	anim.SetBool("walkForward", false);
+				anim.SetBool("walkBackward", false);
+			}
+		}
+		else
+		{	//Debug.Log("Warning: Animator not set!");
+		}
 
 		//Aiming
 		if (Camera.main != null)
