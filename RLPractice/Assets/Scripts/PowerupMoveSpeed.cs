@@ -9,14 +9,14 @@ public class PowerupMoveSpeed : PowerupBonusScript
 	{	base.Begin();
 		if (owner != null)
 		{	movement_script = owner.GetComponent<PlayerController>();
-			if (movement_script != null)
+			if (movement_script != null && strength != 0.0f)
 			{	movement_script.player_speed *= strength;
 			}
 		}
 	}
 
 	public override void End() //Terminate this buff
-	{	if (movement_script != null)
+	{	if (movement_script != null && strength != 0.0f)
 		{	movement_script.player_speed /= strength;
 		}
 		base.End();

@@ -6,8 +6,9 @@ public class BulletController : MonoBehaviour {
 	public bool destroy_on_impact = true; //Bulled destroyed instead of stopping
 	public bool take_damage = false; //Can be destroyed by other projectiles
 	public float lifetime = 4.0f; //Time to live in seconds
-	public int damage = 0; //Damage in hitpoints
-	public int hitpoints = 0; //Hitpoints if can be damaged
+	public float damage = 1.0f; //Damage in hitpoints
+	public float hitpoints = 0.0f; //Hitpoints if can be damaged
+	public float pierce_hp_cost = 0.0f; //Hitpoints lost each impact
 	public Vector3 bullet_vel; //Trajectory of bullet
 	public GameObject owner; //Unit that fired projectile
 
@@ -58,39 +59,44 @@ public class BulletController : MonoBehaviour {
 				{	Destroy(gameObject);
 				}
 			}
-			else if (target.tag == "Destructable") //Destructable doodads
-			{	//Damage doodad
-				if (!piercing)
-				{	Destroy(gameObject);
-				}
+			else if (target.tag == "Destructible") //Doodads
+			{	Destroy(target);
+				CheckPierce();
 			}
 			else if (target.tag == "Enemy")
 			{	if (owner == null || owner.tag != "Enemy")
-				{	//Damage enemy
-					if (owner != null && owner.tag == "Player")
-					{	//Add damage to score
-					}
-					if (!piercing)
-					{	Destroy(gameObject);
-					}
+				{	//TODO: Damage enemy and add score
+					CheckPierce();
 				}
 			}
 			else if (target.tag == "Player")
 			{	if (owner == null || owner.tag != "Player")
-				{	//Damage player
-					if (!piercing)
-					{	Destroy(gameObject);
-					}
+				{	PlayerController pc = target.GetComponent<PlayerController>();
+					pc.TakeDamage(damage,owner);
+					CheckPierce();
 				}
 			}
 			else if (target.tag == "Projectile")
 			{	BulletController target_ctrl = target.GetComponent<BulletController>();
 				if (target_ctrl.take_damage && (owner == null || target_ctrl.owner == null || target_ctrl.owner.tag != owner.tag) ) //Avoid friendly fire
-				{	Destroy(target);
-					if (take_damage)
-					{	Destroy(gameObject);
+				{	target_ctrl.hitpoints -= damage;
+					if (target_ctrl.hitpoints <= 0.0f)
+					{	Destroy(target);
 					}
+					CheckPierce();
 				}
+			}
+		}
+	}
+
+	protected void CheckPierce() //Check whether to destroy or continue
+	{	if (!piercing)
+		{	Destroy(gameObject);
+		}
+		else
+		{	hitpoints -= pierce_hp_cost;
+			if (hitpoints <= 0.0f)
+			{	Destroy(gameObject);
 			}
 		}
 	}
