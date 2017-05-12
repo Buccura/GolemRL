@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 	private GunController gun_ctrl; //Script of selected weapon
 
     public Animator anim;
+    public bool isMoving;
+    public GameObject directionReference;
 
 	void Start()
 	{	player_aim = new Quaternion();
@@ -41,31 +43,39 @@ public class PlayerController : MonoBehaviour
         // Animation Controls
         if(player_vel.x != 0 || player_vel.z != 0)
         {
-            //anim.SetFloat("WalkForward", 1f);
+            isMoving = true;
             anim.SetBool("isWalking", true);
         }
         else
         {
+            isMoving = false;
             anim.SetBool("isWalking", false);
-            //anim.SetFloat("WalkForward", 0f);
         }
-       // Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-       float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
-        Debug.Log(moveAngle);
-        if(moveAngle < 45)
-        {
+        // Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
+        // float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
+        float moveAngle = Mathf.Atan2(player_rb.velocity.z, player_rb.velocity.x) * Mathf.Rad2Deg;
+        //Debug.Log(moveAngle + " " + transform.rotation.y);
+        if((moveAngle <= 45f || moveAngle > 315f ) && isMoving)
+        {   
             anim.SetBool("walkForward", true);
             anim.SetBool("walkBackward", false);
+            anim.SetBool("walkLeft", false);
+            anim.SetBool("walkRight", false);
         }
-        else if(moveAngle > 110)
+        else if((moveAngle <= 135f && moveAngle > 45f) && isMoving)
         {
+           
             anim.SetBool("walkForward", false);
             anim.SetBool("walkBackward", true);
+            anim.SetBool("walkLeft", false);
+            anim.SetBool("walkRight", false);
         }
         else
         {
             anim.SetBool("walkForward", false);
             anim.SetBool("walkBackward", false);
+            anim.SetBool("walkLeft", false);
+            anim.SetBool("walkRight", false);
         }
 
 		//Aiming
@@ -101,8 +111,9 @@ public class PlayerController : MonoBehaviour
 	
 	void FixedUpdate()
 	{	player_rb.velocity = player_vel;
-		player_rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, player_aim, player_turn_rate*Time.deltaTime));
-	}
+        player_rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, player_aim, player_turn_rate*Time.deltaTime));
+        directionReference.transform.localRotation = Quaternion.RotateTowards(directionReference.transform.localRotation, player_aim, player_turn_rate * Time.deltaTime);
+    }
 
 	bool SwitchWeapon(int weapon_num)
 	{	if ( selected_weapon == weapon_num )

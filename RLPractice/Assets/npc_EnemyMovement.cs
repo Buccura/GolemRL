@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class npc_EnemyMovement : MonoBehaviour {
 
+    public enum behavior {shoot,suicide,}
+
+    public behavior AIBehavior;
+
 	public NavMeshAgent navAgent;
 	public GameObject player;
     public GameObject child;
@@ -54,20 +58,28 @@ public class npc_EnemyMovement : MonoBehaviour {
                 maskWithDoodads = maskIgnoreDoodads;
             }
             RaycastHit hit2;
-            
-            if (Physics.Raycast(transform.position, raycastDir, out hit2,100f, maskWithDoodads))
+            if(AIBehavior == behavior.shoot)
             {
-                if(hit2.collider.gameObject.tag != "Player")
+                if (Physics.Raycast(transform.position, raycastDir, out hit2, 100f, maskWithDoodads))
                 {
-                    playerInSight = false;
-                    navAgent.speed = speed;
-                    navAgent.destination = player.transform.position;
-                }
-                else
-                {
-                    playerInSight = true;            
+                    if (hit2.collider.gameObject.tag != "Player")
+                    {
+                        playerInSight = false;
+                        navAgent.speed = speed;
+                        navAgent.destination = player.transform.position;
+                    }
+                    else
+                    {
+                        playerInSight = true;
+                    }
                 }
             }
+            else if(AIBehavior == behavior.suicide)
+            {
+                navAgent.speed = speed;
+                navAgent.destination = player.transform.position;
+            }
+
         }
 
 
@@ -75,21 +87,36 @@ public class npc_EnemyMovement : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (playerInSight && sawPlayer)
+        if(AIBehavior == behavior.suicide)
         {
-            navAgent.speed = 0f;
-            Vector3 target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-            Quaternion rot = Quaternion.LookRotation(target);
-            Vector3 newDir = Vector3.RotateTowards(child.transform.forward, target - transform.position, 10f * Time.deltaTime, 0.0f);
-            child.transform.rotation = Quaternion.LookRotation(newDir);
-        }
-        else
-        {
-            // child.transform.rotation = transform.rotation;
-            Vector3 newDir = Vector3.RotateTowards(child.transform.forward, transform.forward, 15f * Time.deltaTime, 0.0f);
-            child.transform.rotation = Quaternion.LookRotation(newDir);
+            if (playerInSight && sawPlayer)
+            {
+                navAgent.speed = 0f;
+                Vector3 target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+                Quaternion rot = Quaternion.LookRotation(target);
+                Vector3 newDir = Vector3.RotateTowards(child.transform.forward, target - transform.position, 10f * Time.deltaTime, 0.0f);
+                child.transform.rotation = Quaternion.LookRotation(newDir);
+            }
+            else
+            {
+                // child.transform.rotation = transform.rotation;
+                Vector3 newDir = Vector3.RotateTowards(child.transform.forward, transform.forward, 15f * Time.deltaTime, 0.0f);
+                child.transform.rotation = Quaternion.LookRotation(newDir);
+            }
         }
 
+
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(AIBehavior == behavior.suicide)
+        {
+            if(col.gameObject.tag == "Player")
+            {
+                Destroy(col.gameObject);
+            }
+        }
     }
 
 }
