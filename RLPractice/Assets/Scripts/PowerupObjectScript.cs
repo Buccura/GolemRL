@@ -5,15 +5,25 @@ public class PowerupObjectScript : MonoBehaviour
 {	public bool timeout = false; //Despawns after lifetime expires
 	public float lifetime = 60.0f; //Time to live in seconds
 	public float spin_rate = 15.0f; //Counter-clockwise spin (deg/sec)
+	public GameObject[] powerup_bonus_prefabs; //Powerup prefabs to attach to this unit
 
-	public GameObject[] powerup_bonuses; //Powerups to give to unit
+	private GameObject[] powerup_bonuses; //Powerups to give to unit
 
 	void Start()
-	{	PowerupBonusScript[] bonuses = GetComponentsInChildren<PowerupBonusScript>();
-		if (bonuses.Length > 0)
-		{	powerup_bonuses = new GameObject[bonuses.Length];
-			for(int i = 0; i < bonuses.Length; i++)
-			{	powerup_bonuses[i] = bonuses[i].gameObject;
+	{	if (powerup_bonus_prefabs.Length > 0) //Prefab bonuses
+		{	powerup_bonuses = new GameObject[powerup_bonus_prefabs.Length];
+			for(int i = 0; i < powerup_bonus_prefabs.Length; i++)
+			{	GameObject bonus_instance = Instantiate(powerup_bonus_prefabs[i],transform);
+				powerup_bonuses[i] = bonus_instance;
+			}
+		}
+		else
+		{	PowerupBonusScript[] bonuses = GetComponentsInChildren<PowerupBonusScript>();
+			if (bonuses.Length > 0) //Instanced bonuses
+			{	powerup_bonuses = new GameObject[bonuses.Length];
+				for(int i = 0; i < bonuses.Length; i++)
+				{	powerup_bonuses[i] = bonuses[i].gameObject;
+				}
 			}
 		}
 	}
