@@ -32,9 +32,6 @@ public class GunController : MonoBehaviour
 		for (int i = 0; i < muzzle_count; i++)
 		{	muzzle_tf[i] = muzzle_points[i].GetComponent<Transform>();
 		}
-		if (hide_on_deselect)
-		{	Hide();
-		}
 		if (gun_owner.tag == "Player")
 		{	player_owner = gun_owner.GetComponent<PlayerController>();
 		}
@@ -90,7 +87,7 @@ public class GunController : MonoBehaviour
 		}
 	}
 
-	private void Hide() //Don't render object or children
+	public void Hide() //Don't render object or children
 	{	Renderer rend = GetComponent<Renderer>();
 		if (rend != null)
 		{	rend.enabled = false;
@@ -111,7 +108,7 @@ public class GunController : MonoBehaviour
 		}
 	}
 
-	private void Unhide() //Render object and children
+	public void Unhide() //Render object and children
 	{	Renderer rend = GetComponent<Renderer>();
 		if (rend != null)
 		{	rend.enabled = true;

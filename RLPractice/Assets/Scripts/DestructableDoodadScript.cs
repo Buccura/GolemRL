@@ -16,12 +16,11 @@ public class DestructableDoodadScript : MonoBehaviour
 	public void TakeDamage(float amount)
 	{	hitpoints -= amount;
 		if (hitpoints <= 0.0f)
-		{	SpawnLoot();
-			Destroy(gameObject);
+		{	Die();
 		}
 	}
 
-	private void SpawnLoot()
+	public void Die()
 	{	if (loot_prefab != null)
 		{	GameObject spawned_object = Instantiate(loot_prefab,transform.position,transform.rotation);
 			PowerupObjectScript powerup = spawned_object.GetComponent<PowerupObjectScript>();
@@ -29,5 +28,6 @@ public class DestructableDoodadScript : MonoBehaviour
 			{	powerup.powerup_bonus_prefabs = bonus_prefabs;
 			}
 		}
+		Destroy(gameObject);
 	}
 }
