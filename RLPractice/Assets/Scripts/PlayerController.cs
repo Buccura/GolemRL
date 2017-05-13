@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
 	public float player_turn_rate = 180.0f; //Turn speed (degrees/sec)
 	public float player_gun_speed_mult = 1.0f; //Projectile speed multiplier
 	public float player_gun_rof_mult = 1.0f; //Rate of fire multiplier
-	public GameObject[] player_weapon; //Array of available weapons
+	public bool[] unlocked_weapons; //Unlocked weapon slots
+	public GameObject[] player_weapons; //Array of available weapons
 	public Animator anim;
 
 	private int weapon_slots; //Number of selectable weapons
@@ -27,8 +28,18 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{	player_aim = new Quaternion();
 		player_rb = GetComponent<Rigidbody>();
-		weapon_slots = player_weapon.Length;
-		gun_ctrl = player_weapon[selected_weapon].GetComponent<GunController>();
+		Debug.Assert(player_weapons.Length == unlocked_weapons.Length); //Arrays must be equal length
+		weapon_slots = player_weapons.Length;
+		for(int i = 0; i < weapon_slots; i++)
+		{	gun_ctrl = player_weapons[i].GetComponent<GunController>();
+			if (!unlocked_weapons[i])
+			{	gun_ctrl.Hide();
+			}
+			else if (gun_ctrl.hide_on_deselect)
+			{	gun_ctrl.Hide();
+			}
+		}
+		gun_ctrl = player_weapons[selected_weapon].GetComponent<GunController>();
 		gun_ctrl.Select(0.0f);
 	}
 
@@ -116,17 +127,23 @@ public class PlayerController : MonoBehaviour
 		{	Debug.Log("Already equipped!");
 			return false;
 		}
-		if (weapon_num >= 0 && weapon_num < weapon_slots && player_weapon[weapon_num] != null) //Valid weapon
-		{	GunController gc = player_weapon[weapon_num].GetComponent<GunController>();
-			if ( gc.ammo_count >= gc.ammo_cost ) //Enough ammo
-			{	gun_ctrl.Deselect();
-				selected_weapon = weapon_num;
-				gun_ctrl = gc;
-				gun_ctrl.Select(1.0f); //TODO: Replace with proper animation time (swap out + swap in)
-				return true;
+		if (weapon_num >= 0 && weapon_num < weapon_slots && player_weapons[weapon_num] != null) //Valid weapon
+		{	if (unlocked_weapons[weapon_num])
+			{	GunController gc = player_weapons[weapon_num].GetComponent<GunController>();
+				if ( gc.ammo_count >= gc.ammo_cost ) //Enough ammo
+				{	gun_ctrl.Deselect();
+					selected_weapon = weapon_num;
+					gun_ctrl = gc;
+					gun_ctrl.Select(1.0f); //TODO: Replace with proper animation time (swap out + swap in)
+					return true;
+				}
+				else
+				{	Debug.Log("Not enough ammo!");
+					return false;
+				}
 			}
 			else
-			{	Debug.Log("Not enough ammo!");
+			{	Debug.Log("Not unlocked!");
 				return false;
 			}
 		}
