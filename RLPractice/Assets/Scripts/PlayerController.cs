@@ -17,12 +17,16 @@ public class PlayerController : MonoBehaviour
 	public GameObject[] player_weapon; //Array of available weapons
 	public Animator anim;
 
-	private int weapon_slots; //Number of selectable weapons
+    public float moveAngle;
+
+    private int weapon_slots; //Number of selectable weapons
 	private int selected_weapon = 0; //Value from 0 to weapon_slots-1
 	private Vector3 player_vel; //Velocity vector
 	private Quaternion player_aim; //Desired heading
 	private Rigidbody player_rb; //Physics for player
 	private GunController gun_ctrl; //Script of selected weapon
+
+
 
 	void Start()
 	{	player_aim = new Quaternion();
@@ -56,20 +60,42 @@ public class PlayerController : MonoBehaviour
 					//anim.SetFloat("WalkForward", 0f);
 				}
 				// Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-				float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
+				moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
 				//Debug.Log(moveAngle);
-				if(moveAngle < 45)
+				if(moveAngle < 65 && moveAngle > 28)  
 				{	anim.SetBool("walkForward", true);
 					anim.SetBool("walkBackward", false);
-				}
-				else if(moveAngle > 110)
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
+				else if(moveAngle >= 157 && moveAngle <= 247)
 				{	anim.SetBool("walkForward", false);
 					anim.SetBool("walkBackward", true);
-				}
-				else
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
+                else if(moveAngle >= 65 && moveAngle < 157)
+                {
+                    
+                    anim.SetBool("walkForward", false);
+                    anim.SetBool("walkBackward", false);
+                    anim.SetBool("walkLeft", true);
+                    anim.SetBool("walkRight", false);
+                }
+                else if (moveAngle <= 28 || moveAngle > 247)
+                {
+
+                    anim.SetBool("walkForward", false);
+                    anim.SetBool("walkBackward", false);
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", true);
+                }
+                else
 				{	anim.SetBool("walkForward", false);
 					anim.SetBool("walkBackward", false);
-				}
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
 			}
 			else
 			{	//Debug.Log("Warning: Animator not set!");
