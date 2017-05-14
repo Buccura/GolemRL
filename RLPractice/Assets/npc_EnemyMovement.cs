@@ -12,6 +12,7 @@ public class npc_EnemyMovement : MonoBehaviour {
     public LayerMask maskWithDoodads;
     public bool sawPlayer;
     public bool playerInSight;
+	public bool playerAlive;
     public float spotDistance;
 
     public float speed;
@@ -29,10 +30,10 @@ public class npc_EnemyMovement : MonoBehaviour {
 	
 	void Update()
 	{
-        
-
         Vector3 raycastDir = player.transform.position - transform.position;
-        RaycastHit hit; 
+        RaycastHit hit;
+
+		playerAlive = player.GetComponent<PlayerController>().player_alive;
         if(Physics.Raycast(transform.position,raycastDir,out hit, 100f,maskIgnoreDoodads))
         {
             if (hit.collider.gameObject.tag == "Player" && hit.distance <= spotDistance && !sawPlayer)
@@ -42,7 +43,7 @@ public class npc_EnemyMovement : MonoBehaviour {
 
         }
 
-        if (sawPlayer)
+		if (sawPlayer && playerAlive)
         {
             if(angerTimer <= angerTimerSet && !isAngry)
             {
@@ -65,7 +66,7 @@ public class npc_EnemyMovement : MonoBehaviour {
                 }
                 else
                 {
-                    playerInSight = true;            
+                    playerInSight = true;
                 }
             }
         }

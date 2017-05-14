@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour
 	}
 
 	void Update()
-	{	if (player_alive)
+	{	player_vel = Vector3.zero; //Don't drift away if dead
+		if (player_alive)
 		{	Vector3 aim_point; //Where the cursor is pointing
 			Vector3 aim_vector; //A vector from the player to the cursor
 
@@ -200,13 +201,12 @@ public class PlayerController : MonoBehaviour
 			{	player_hp -= amount;
 			}
 			else
-			{	player_hp -= Mathf.Min(0.0f, (amount-player_armor_flat)*player_armor_scale);
+			{	player_hp -= Mathf.Max(0.0f, (amount-player_armor_flat)*player_armor_scale);
 			}
 			if ( player_hp <= 0.0f)
 			{	player_alive = false;
-				Debug.Log(gameObject);
-				Debug.Log("killed by");
-				Debug.Log(source);
+				player_hp = 0.0f;
+				Debug.Log(gameObject.name+" killed by "+source.name);
 			}
 		}
 	}
