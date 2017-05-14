@@ -1,8 +1,8 @@
 ﻿//GolemRL Bullet Object Script
 using UnityEngine;
 
-public class BulletController : MonoBehaviour {
-	public bool piercing = false; //Bullet only stops for walls
+public class BulletController : MonoBehaviour
+{	public bool piercing = false; //Bullet only stops for walls
 	public bool destroy_on_impact = true; //Bulled destroyed instead of stopping
 	public bool take_damage = false; //Can be destroyed by other projectiles
 	public float lifetime = 4.0f; //Time to live in seconds
@@ -60,7 +60,8 @@ public class BulletController : MonoBehaviour {
 				}
 			}
 			else if (target.tag == "Destructible") //Doodads
-			{	Destroy(target);
+			{	DestructableDoodadScript ds = target.GetComponent<DestructableDoodadScript>();
+				ds.TakeDamage(damage);
 				CheckPierce();
 			}
 			else if (target.tag == "Enemy")

@@ -4,6 +4,7 @@
     <assembly>
       <name>UnityEngine.TestRunner</name>
     </assembly>
+<<<<<<< HEAD
     <member name="?:UnityEngine.TestTools.IMonoBehaviourTest">
       <summary>
         <para>A MonoBehaviour test needs to implement this interface.</para>
@@ -14,6 +15,8 @@
         <para>Indicates when the test is considered finished.</para>
       </summary>
     </member>
+=======
+>>>>>>> 5a1a3558bc14dcf892d4877da48701fd5d74aeb2
     <member name="?:UnityEngine.TestTools.IPrebuildSetup">
       <summary>
         <para>Interface for the method that implements the prebuild step.</para>
@@ -48,11 +51,14 @@
         <para>Triggers an assert if any logs have been received that were not expected. Returns without asserting if all logs received so far have been registered as expected.</para>
       </summary>
     </member>
+<<<<<<< HEAD
     <member name="T:UnityEngine.TestTools.MonoBehaviourTest`1">
       <summary>
         <para>Wrapper for running tests that are imlpemented as MonoBehaviours.</para>
       </summary>
     </member>
+=======
+>>>>>>> 5a1a3558bc14dcf892d4877da48701fd5d74aeb2
     <member name="T:UnityEngine.TestTools.PrebuildSetupAttribute">
       <summary>
         <para>Allows to define a setup method for the test that will be invoked before the test run is started.</para>
@@ -60,7 +66,11 @@
     </member>
     <member name="M:UnityEngine.TestTools.PrebuildSetupAttribute.#ctor(System.Type)">
       <summary>
+<<<<<<< HEAD
         <para>Points to a class that imlpements TestTools.IPrebuildSetup. The method from TestTools.IPrebuildSetup will be executed before the test run is initiated.</para>
+=======
+        <para></para>
+>>>>>>> 5a1a3558bc14dcf892d4877da48701fd5d74aeb2
       </summary>
       <param name="setupClass">Type of the class implementing TestTools.IPrebuildSetup.</param>
     </member>
@@ -69,6 +79,20 @@
         <para>Platforms the tests can run on.</para>
       </summary>
     </member>
+<<<<<<< HEAD
+=======
+    <member name="T:UnityEngine.TestTools.UnityPlatformAttribute">
+      <summary>
+        <para>Specify on which platform the test should run on.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.TestTools.UnityPlatformAttribute.#ctor(UnityEngine.TestTools.TestPlatform[])">
+      <summary>
+        <para>Paltform the test can run on.</para>
+      </summary>
+      <param name="includePlatforms"></param>
+    </member>
+>>>>>>> 5a1a3558bc14dcf892d4877da48701fd5d74aeb2
     <member name="T:UnityEngine.TestTools.UnityTestAttribute">
       <summary>
         <para>Special type of a unit test that allows to yield from test in order to skip frames when the test is running.</para>

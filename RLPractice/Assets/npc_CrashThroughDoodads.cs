@@ -7,11 +7,11 @@ public class npc_CrashThroughDoodads : MonoBehaviour {
     public bool isChasing;
 	
 	void OnCollisionEnter(Collision col)
-    {
-        Debug.Log(col.gameObject.name + " " + col.gameObject.layer);
-        if(col.gameObject.layer == 10)
-        {
-            Destroy(col.gameObject);
-        }
+	{	GameObject obj = col.gameObject;
+        Debug.Log(obj.name + " " + obj.tag);
+		if (obj.tag == "Destructible")
+		{	DestructableDoodadScript ds = obj.GetComponent<DestructableDoodadScript>();
+			ds.Die();
+		}
     }
 }

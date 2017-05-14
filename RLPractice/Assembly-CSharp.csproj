@@ -47,13 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\BoardManager.cs" />
      <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\DestructableDoodadScript.cs" />
      <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PowerupBonusScript.cs" />
+     <Compile Include="Assets\Scripts\PowerupInstantHealth.cs" />
      <Compile Include="Assets\Scripts\PowerupMoveSpeed.cs" />
      <Compile Include="Assets\Scripts\PowerupObjectScript.cs" />
      <Compile Include="Assets\Scripts\cameraShift.cs" />
