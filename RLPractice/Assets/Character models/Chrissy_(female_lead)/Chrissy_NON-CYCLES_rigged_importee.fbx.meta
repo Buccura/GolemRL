@@ -91,6 +91,28 @@ ModelImporter:
     100166: toe.R_end
     100168: upper_arm.L
     100170: upper_arm.R
+    100172: foot control bone.L
+    100174: foot control bone.R
+    100176: foot roll.L
+    100178: foot roll.R
+    100180: IK control.L
+    100182: IK control.L_end
+    100184: IK control.R
+    100186: IK control.R_end
+    100188: Leftshin.L
+    100190: Leftshin.L_end
+    100192: LeftThigh.L
+    100194: poletarget.L
+    100196: poletarget.L_end
+    100198: poletarget.R
+    100200: poletarget.R_end
+    100202: Rightshin.R
+    100204: Rightshin.R_end
+    100206: RightThigh.R
+    100208: toe control.L
+    100210: toe control.L_end
+    100212: toe control.R
+    100214: toe control.R_end
     400000: Camera
     400002: chest
     400004: //RootNode
@@ -177,12 +199,40 @@ ModelImporter:
     400166: toe.R_end
     400168: upper_arm.L
     400170: upper_arm.R
+    400172: foot control bone.L
+    400174: foot control bone.R
+    400176: foot roll.L
+    400178: foot roll.R
+    400180: IK control.L
+    400182: IK control.L_end
+    400184: IK control.R
+    400186: IK control.R_end
+    400188: Leftshin.L
+    400190: Leftshin.L_end
+    400192: LeftThigh.L
+    400194: poletarget.L
+    400196: poletarget.L_end
+    400198: poletarget.R
+    400200: poletarget.R_end
+    400202: Rightshin.R
+    400204: Rightshin.R_end
+    400206: RightThigh.R
+    400208: toe control.L
+    400210: toe control.L_end
+    400212: toe control.R
+    400214: toe control.R_end
     4300000: Cube
     7400000: metarig|BACK MOVE
     7400002: metarig|FRONT MOVE
     7400004: metarig|movement actions
     7400006: metarig|movement actions.001
     7400008: metarig|RIGHT MOVE
+    7400010: metarig|fly
+    7400012: metarig|IDLE
+    7400014: metarig|Strafe Left
+    7400016: metarig|Strafe right
+    7400018: metarig|Thrust
+    7400020: metarig|walk cycle
     9500000: //RootNode
     13700000: Cube
   materials:
