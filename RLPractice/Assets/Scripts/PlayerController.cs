@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
 		{	player_alive = true;
 		}
 		if (percent)
-		{	player_hp *= amount;
+		{	player_hp += player_hp_max*amount*0.01f;
 		}
 		else
 		{	player_hp += amount;
