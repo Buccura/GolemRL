@@ -21,6 +21,9 @@ public class npc_EnemyMovement : MonoBehaviour {
     private float angerTimer = 0;
     public bool isAngry;
 
+    public Animator anim;
+    public bool isDead;
+
 	void Start()
 	{
         spotDistance = 30f;
@@ -30,67 +33,82 @@ public class npc_EnemyMovement : MonoBehaviour {
 	
 	void Update()
 	{
-        Vector3 raycastDir = player.transform.position - transform.position;
-        RaycastHit hit;
-
-		playerAlive = player.GetComponent<PlayerController>().player_alive;
-        if(Physics.Raycast(transform.position,raycastDir,out hit, 100f,maskIgnoreDoodads))
+        if(!isDead)
         {
-            if (hit.collider.gameObject.tag == "Player" && hit.distance <= spotDistance && !sawPlayer)
+            Vector3 raycastDir = player.transform.position - transform.position;
+            RaycastHit hit;
+
+
+
+            playerAlive = player.GetComponent<PlayerController>().player_alive;
+            if (Physics.Raycast(transform.position, raycastDir, out hit, 100f, maskIgnoreDoodads))
             {
-                sawPlayer = true;
+                if (hit.collider.gameObject.tag == "Player" && hit.distance <= spotDistance && !sawPlayer)
+                {
+                    sawPlayer = true;
+                }
+
             }
 
-        }
+            if (sawPlayer && playerAlive)
+            {
+                if (angerTimer <= angerTimerSet && !isAngry)
+                {
+                    angerTimer += Time.deltaTime;
+                }
+                else if (angerTimer > angerTimerSet && !isAngry)
+                {
+                    isAngry = true;
+                    maskWithDoodads = maskIgnoreDoodads;
+                }
+                RaycastHit hit2;
 
-		if (sawPlayer && playerAlive)
-        {
-            if(angerTimer <= angerTimerSet && !isAngry)
-            {
-                angerTimer += Time.deltaTime;
-            }
-            else if(angerTimer > angerTimerSet && !isAngry)
-            {
-                isAngry = true;
-                maskWithDoodads = maskIgnoreDoodads;
-            }
-            RaycastHit hit2;
-            
-            if (Physics.Raycast(transform.position, raycastDir, out hit2,100f, maskWithDoodads))
-            {
-                if(hit2.collider.gameObject.tag != "Player")
+                if (Physics.Raycast(transform.position, raycastDir, out hit2, 100f, maskWithDoodads))
                 {
-                    playerInSight = false;
-                    navAgent.speed = speed;
-                    navAgent.destination = player.transform.position;
-                }
-                else
-                {
-                    playerInSight = true;
+                    if (hit2.collider.gameObject.tag != "Player")
+                    {
+                        anim.SetBool("IsWalking", true);
+                        playerInSight = false;
+                        navAgent.speed = speed;
+                        navAgent.destination = player.transform.position;
+                    }
+                    else
+                    {
+                        playerInSight = true;
+                    }
                 }
             }
         }
+        
 
 
 	}
 
     void LateUpdate()
     {
-        if (playerInSight && sawPlayer)
+
+        if (!isDead)
         {
-            navAgent.speed = 0f;
-            Vector3 target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-            Quaternion rot = Quaternion.LookRotation(target);
-            Vector3 newDir = Vector3.RotateTowards(child.transform.forward, target - transform.position, 10f * Time.deltaTime, 0.0f);
-            child.transform.rotation = Quaternion.LookRotation(newDir);
+            if (playerInSight && sawPlayer)
+            {
+                anim.SetBool("IsWalking", false);
+                navAgent.speed = 0f;
+                Vector3 target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+                Quaternion rot = Quaternion.LookRotation(target);
+                Vector3 newDir = Vector3.RotateTowards(child.transform.forward, target - transform.position, 10f * Time.deltaTime, 0.0f);
+                child.transform.rotation = Quaternion.LookRotation(newDir);
+            }
+            else
+            {
+                // child.transform.rotation = transform.rotation;
+                Vector3 newDir = Vector3.RotateTowards(child.transform.forward, transform.forward, 15f * Time.deltaTime, 0.0f);
+                child.transform.rotation = Quaternion.LookRotation(newDir);
+            }
         }
-        else
-        {
-            // child.transform.rotation = transform.rotation;
-            Vector3 newDir = Vector3.RotateTowards(child.transform.forward, transform.forward, 15f * Time.deltaTime, 0.0f);
-            child.transform.rotation = Quaternion.LookRotation(newDir);
-        }
+        
 
     }
+
+
 
 }

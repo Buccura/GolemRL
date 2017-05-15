@@ -25,7 +25,12 @@ public class GunController : MonoBehaviour
 	private GameObject gun_owner; //Unit holding gun
 	private PlayerController player_owner; //Script of player holding gun, else null
 
-	void Start()
+    public AudioSource gunSoundBad;
+    public Npc_Health TempAudio;
+
+    public bool isDead;
+
+    void Start()
 	{	gun_owner = transform.parent.gameObject;
 		muzzle_count = muzzle_points.Length;
 		muzzle_tf = new Transform[muzzle_count];
@@ -38,13 +43,20 @@ public class GunController : MonoBehaviour
 	}
 
 	void Update()
-	{	float rof_mod = 1.0f;
-		if (player_owner != null)
-		{	rof_mod = player_owner.player_gun_rof_mult;
-		}
-		if (fire_counter > 0.0f)
-		{	fire_counter -= Time.deltaTime * rof_mult * rof_mod;
-		}
+	{
+        if(!isDead)
+        {
+            float rof_mod = 1.0f;
+            if (player_owner != null)
+            {
+                rof_mod = player_owner.player_gun_rof_mult;
+            }
+            if (fire_counter > 0.0f)
+            {
+                fire_counter -= Time.deltaTime * rof_mult * rof_mod;
+            }
+        }
+        
 	}
 
 	public void Fire(Vector3 player_velocity)
@@ -68,7 +80,9 @@ public class GunController : MonoBehaviour
 	}
 
 	public bool FireReady()
-	{	return (fire_counter <= 0.0f) && (ammo_count >= ammo_cost);
+	{
+        
+        return (fire_counter <= 0.0f) && (ammo_count >= ammo_cost);
 	}
 
 	public void Deselect() //Switch away from this weapon
@@ -138,6 +152,7 @@ public class GunController : MonoBehaviour
 			vel_mod = player_owner.player_gun_speed_mult;
 		}
 		GameObject bullet = Instantiate(gun_projectile, muzzle_tf[muzzle_num].position, muzzle_tf[muzzle_num].rotation);
+       //
 		BulletController bullet_ctrl = bullet.GetComponent<BulletController>();
 		bullet_ctrl.owner = gun_owner;
 		bullet_ctrl.damage *= damage_mult * dmg_mod;
@@ -150,7 +165,8 @@ public class GunController : MonoBehaviour
 		}
 		Debug.DrawRay(muzzle_tf[muzzle_num].position,trajectory*5, Color.magenta,fire_cooldown/rof_mult);
 		bullet_ctrl.bullet_vel = inherited_velocity + muzzle_velocity*speed_mult*vel_mod*trajectory;
-	}
+        
+    }
 	//Account for angular velocity. This ends up being only ~3 units/sec at distance 0.75 from center at 180 deg/sec.
 	//Could be useful at larger distances from center of rotation.
 	/*public void FireWithAngular(Vector3 player_velocity, Vector3 player_position, float delta_angle, float delta_t)

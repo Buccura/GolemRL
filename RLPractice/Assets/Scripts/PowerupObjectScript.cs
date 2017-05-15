@@ -47,11 +47,22 @@ public class PowerupObjectScript : MonoBehaviour
 		if (target.tag == "Player")
 		{	Debug.Log("Powerup!");
 			if (powerup_bonuses != null)
-			{	for(int i = 0; i < powerup_bonuses.Length; i++)
+			{	
+                // For the prototype's sake, the shards will just heal
+                /*for(int i = 0; i < powerup_bonuses.Length; i++)
 				{	GrantPowerupBonus(target, powerup_bonuses[i]);
-				}
+                    
+
+				}*/
+
 			}
-			Destroy(gameObject);
+            // PLACEHOLDER. GIVES PLAYER HEALTH. 
+            target.GetComponent<PlayerController>().player_hp += 1;
+            if (target.GetComponent<PlayerController>().player_hp > target.GetComponent<PlayerController>().player_hp_max)
+            {
+                target.GetComponent<PlayerController>().player_hp = target.GetComponent<PlayerController>().player_hp_max;
+            }
+            Destroy(gameObject);
 		}
 	}
 

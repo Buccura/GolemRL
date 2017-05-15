@@ -66,9 +66,13 @@ public class BulletController : MonoBehaviour
 			}
 			else if (target.tag == "Enemy")
 			{	if (owner == null || owner.tag != "Enemy")
-				{	//TODO: Damage enemy and add score
-					CheckPierce();
-				}
+				{
+                    Debug.Log("BAM BITCH");
+                    Npc_Health badHP = target.GetComponent<Npc_Health>();
+                    badHP.HP -= damage;
+                    CheckPierce();
+                    Destroy(gameObject);
+                }
 			}
 			else if (target.tag == "Player")
 			{	if (owner == null || owner.tag != "Player")

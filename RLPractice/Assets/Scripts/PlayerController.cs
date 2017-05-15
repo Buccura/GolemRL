@@ -1,5 +1,6 @@
 //GolemRL Player Object Script
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {	public bool cam_relative_controls = false; //Player movement relative to camera instead of grid
@@ -18,12 +19,24 @@ public class PlayerController : MonoBehaviour
 	public GameObject[] player_weapons; //Array of available weapons
 	public Animator anim;
 
-	private int weapon_slots; //Number of selectable weapons
+    public float moveAngle;
+
+    private int weapon_slots; //Number of selectable weapons
 	private int selected_weapon = 0; //Value from 0 to weapon_slots-1
 	private Vector3 player_vel; //Velocity vector
 	private Quaternion player_aim; //Desired heading
 	private Rigidbody player_rb; //Physics for player
 	private GunController gun_ctrl; //Script of selected weapon
+
+    public float runTimerSet;
+    private float runTimer;
+    public float runSpeedBoost;
+    private float playerSpeedSet;
+
+    public Slider HPSlider;
+
+    public AudioSource gunSound;
+    
 
 	void Start()
 	{	player_aim = new Quaternion();
@@ -41,10 +54,18 @@ public class PlayerController : MonoBehaviour
 		}
 		gun_ctrl = player_weapons[selected_weapon].GetComponent<GunController>();
 		gun_ctrl.Select(0.0f);
+
+        runTimer = runTimerSet;
+
+        playerSpeedSet = player_speed;
+
+        HPSlider.maxValue = player_hp_max;
 	}
 
 	void Update()
-	{	player_vel = Vector3.zero; //Don't drift away if dead
+	{
+        HPSlider.value = player_hp;
+        player_vel = Vector3.zero; //Don't drift away if dead
 		if (player_alive)
 		{	Vector3 aim_point; //Where the cursor is pointing
 			Vector3 aim_vector; //A vector from the player to the cursor
@@ -57,6 +78,17 @@ public class PlayerController : MonoBehaviour
 				player_vel = camera_y_rot * player_vel; //Rotate velocity by camera y-axis rotation
 			}
 
+            // Running
+            if(runTimer > 0)
+            {
+                runTimer -= Time.deltaTime;
+                player_speed = playerSpeedSet;
+            }
+            else
+            {
+                player_speed = playerSpeedSet + runSpeedBoost;
+            }
+
 			// Animation Controls
 			if (anim != null)
 			{	if(player_vel.x != 0 || player_vel.z != 0)
@@ -68,23 +100,46 @@ public class PlayerController : MonoBehaviour
 					//anim.SetFloat("WalkForward", 0f);
 				}
 				// Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-				float moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
+				moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
 				//Debug.Log(moveAngle);
-				if(moveAngle < 45)
+				if(moveAngle > 128)  
 				{	anim.SetBool("walkForward", true);
 					anim.SetBool("walkBackward", false);
-				}
-				else if(moveAngle > 110)
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
+				else if(moveAngle <= 128)
 				{	anim.SetBool("walkForward", false);
 					anim.SetBool("walkBackward", true);
-				}
-				else
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
+              /*  else if(moveAngle >= 65 && moveAngle < 157)
+                {
+                    
+                    anim.SetBool("walkForward", false);
+                    anim.SetBool("walkBackward", false);
+                    anim.SetBool("walkLeft", true);
+                    anim.SetBool("walkRight", false);
+                }
+                else if (moveAngle <= 28 || moveAngle > 247)
+                {
+
+                    anim.SetBool("walkForward", false);
+                    anim.SetBool("walkBackward", false);
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", true);
+                }*/
+                else
 				{	anim.SetBool("walkForward", false);
 					anim.SetBool("walkBackward", false);
-				}
+                    anim.SetBool("walkLeft", false);
+                    anim.SetBool("walkRight", false);
+                }
 			}
 			else
-			{	//Debug.Log("Warning: Animator not set!");
+			{	
+                Debug.LogError("Warning: Animator not set!");
 			}
 
 			//Aiming
@@ -223,6 +278,8 @@ public class PlayerController : MonoBehaviour
 			}
 			if ( Input.GetButton("Fire1") && gun_ctrl.FireReady() )
 			{	gun_ctrl.Fire(player_vel);
+                runTimer = runTimerSet;
+                gunSound.Play();
 				/*//Angular velocity is insignificant for now
 				float delta_t = Time.deltaTime;
 				Quaternion end_rotation = Quaternion.RotateTowards(transform.rotation, player_aim, player_turn_rate*delta_t);

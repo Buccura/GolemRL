@@ -160,6 +160,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -170,7 +172,1127 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: metarig|CameraAction
+      takeName: metarig|CameraAction
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|IDLE
+      takeName: metarig|IDLE
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|WALK CYCLE
+      takeName: metarig|WALK CYCLE
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.14409222
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5878963
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|WALK CYCLE reload
+      takeName: metarig|WALK CYCLE reload
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|walk_block
+      takeName: metarig|walk_block
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Camera|CameraAction
+      takeName: Camera|CameraAction
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Camera|walk_block
+      takeName: Camera|walk_block
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/hips
+        weight: 1
+      - path: metarig/hips/spine
+        weight: 1
+      - path: metarig/hips/spine/chest
+        weight: 1
+      - path: metarig/hips/spine/chest/neck
+        weight: 1
+      - path: metarig/hips/spine/chest/neck/neck_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L.001/hand.L.001_end
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001
+        weight: 1
+      - path: metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R.001/hand.R.001_end
+        weight: 1
+      - path: metarig/hips/spine.001
+        weight: 1
+      - path: metarig/hips/spine.001/spine.001_end
+        weight: 1
+      - path: metarig/hips/spine.002
+        weight: 1
+      - path: metarig/hips/spine.002/spine.002_end
+        weight: 1
+      - path: metarig/hips/spine.003
+        weight: 1
+      - path: metarig/hips/spine.003/spine.003_end
+        weight: 1
+      - path: metarig/hips/spine.004
+        weight: 1
+      - path: metarig/hips/spine.004/spine.004_end
+        weight: 1
+      - path: metarig/hips/spine.005
+        weight: 1
+      - path: metarig/hips/spine.005/spine.005_end
+        weight: 1
+      - path: metarig/hips/spine.006
+        weight: 1
+      - path: metarig/hips/spine.006/spine.006_end
+        weight: 1
+      - path: metarig/hips/Thigh.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L
+        weight: 1
+      - path: metarig/hips/Thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/hips/Thigh.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R
+        weight: 1
+      - path: metarig/hips/Thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/leg  control.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L
+        weight: 1
+      - path: metarig/leg  control.L/foot roll.L/leg IK.L/leg IK.L_end
+        weight: 1
+      - path: metarig/leg  control.L/foot.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L
+        weight: 1
+      - path: metarig/leg  control.L/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L
+        weight: 1
+      - path: metarig/leg  control.L/toe control.L/toe control.L_end
+        weight: 1
+      - path: metarig/leg  control.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R
+        weight: 1
+      - path: metarig/leg  control.R/foot roll.R/leg IK.R/leg IK.R_end
+        weight: 1
+      - path: metarig/leg  control.R/foot.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R
+        weight: 1
+      - path: metarig/leg  control.R/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R
+        weight: 1
+      - path: metarig/leg  control.R/toe control.R/toe control.R_end
+        weight: 1
+      - path: metarig/POLE TARGET L
+        weight: 1
+      - path: metarig/POLE TARGET L/POLE TARGET L_end
+        weight: 1
+      - path: metarig/POLE TARGET R
+        weight: 1
+      - path: metarig/POLE TARGET R/POLE TARGET R_end
+        weight: 1
+      - path: Sphere.002
+        weight: 1
+      - path: Sphere.003
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart0
+        weight: 1
+      - path: Sphere.003/Sphere.003_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
