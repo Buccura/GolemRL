@@ -6,6 +6,7 @@ public class npc_Shooting : MonoBehaviour {
 
     public npc_EnemyMovement eM;
 	public GunController gun_script;
+    
 
     void Start()
     {
@@ -14,8 +15,8 @@ public class npc_Shooting : MonoBehaviour {
 
     void Update()
     {
-		if(eM.playerInSight && eM.playerAlive && gun_script.FireReady() )
+		if(eM.playerInSight && eM.playerAlive && !eM.isDead && gun_script.FireReady() )
 		{	gun_script.Fire(Vector3.zero);
-		}
+        }
     }
 }

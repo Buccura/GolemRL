@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 public class DestructableDoodadScript : MonoBehaviour
-{	public float hitpoints = 10.0f; //Hitpoints until destruction
+{	public float drop_chance = 100.0f; //Chance to drop loot
+	public float hitpoints = 10.0f; //Hitpoints until destruction
 	public float loot_heading = 0.0f; //Y-rotation of loot object
 	public Vector3 loot_offset; //Shift loot object position
 	public GameObject loot_prefab; //Object to spawn on death
@@ -23,7 +24,8 @@ public class DestructableDoodadScript : MonoBehaviour
 	}
 
 	public void Die()
-	{	if (loot_prefab != null)
+	{	float x = Random.Range(0f,100f);
+		if (loot_prefab != null && x <= drop_chance)
 		{	GameObject spawned_object = Instantiate(loot_prefab, transform.position+loot_offset, Quaternion.Euler(0.0f,loot_heading,0.0f));
 			
 			PowerupObjectScript powerup = spawned_object.GetComponent<PowerupObjectScript>();

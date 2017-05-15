@@ -78,6 +78,6 @@ public class PowerupObjectScript : MonoBehaviour
 			new_buff.duration += remain;
 		}
 		new_buff.Begin();
-		Debug.Log(new_buff);
+		//Debug.Log(new_buff);
 	}
 }

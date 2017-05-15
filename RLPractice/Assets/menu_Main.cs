@@ -8,9 +8,9 @@ public class menu_Main : MonoBehaviour {
 
     public Button start, exit;
   
-    void Start()
+    public void Reset()
     {
-        Debug.Log(start.transform.position);
+        SceneManager.LoadScene(0);
     }
 
     public void StartGame()
@@ -20,6 +20,6 @@ public class menu_Main : MonoBehaviour {
 
     public void ExitGame()
     {
-
+        Application.Quit();
     }
 }

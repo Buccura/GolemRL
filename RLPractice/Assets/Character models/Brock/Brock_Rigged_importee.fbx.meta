@@ -191,6 +191,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -201,7 +203,2079 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|idle
+      takeName: Armature|idle
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|NOTHING
+      takeName: Armature|NOTHING
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|NOTHING.001
+      takeName: Armature|NOTHING.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|NOTHING1
+      takeName: Armature|NOTHING1
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|strafe left
+      takeName: Armature|strafe left
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.17146975
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.4740634
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|strafe right
+      takeName: Armature|strafe right
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.12536024
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.592219
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|walk back cycle
+      takeName: Armature|walk back cycle
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|walk back cycle.
+      takeName: Armature|walk back cycle.
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.40057635
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.814121
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|walk cycle
+      takeName: Armature|walk cycle
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.12247838
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6023055
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/thigh.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L
+        weight: 1
+      - path: Armature/Hips/thigh.L/Shin.L/Shin.L_end
+        weight: 1
+      - path: Armature/Hips/thigh.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R
+        weight: 1
+      - path: Armature/Hips/thigh.R/Shin.R/Shin.R_end
+        weight: 1
+      - path: Armature/Hips/waist
+        weight: 1
+      - path: Armature/Hips/waist/chest
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/index Palm.L/index
+          base.L/index Bridge.L/index Tip.L/index Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/middle Palm.L/middle
+          base.L/middle Bridge.L/middle tip.L/middle tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/pinky palm.L/pinky
+          Base.L/Pinky bridge.L/pinky tip.L/pinky tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.L/forearm.L/Hand.L/thumb Palm.L/thumb
+          Base.L/thumb Bridge.L/thumb Tip.L/thumb Tip.L_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/index Palm.R/index
+          base.R/index Bridge.R/index Tip.R/index Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/middle Palm.R/middle
+          base.R/middle Bridge.R/middle tip.R/middle tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/pinky palm.R/pinky
+          Base.R/Pinky bridge.R/pinky tip.R/pinky tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R
+        weight: 1
+      - path: Armature/Hips/waist/chest/Bicep.R/forearm.R/Hand.R/thumb Palm.R/thumb
+          Base.R/thumb Bridge.R/thumb Tip.R/thumb Tip.R_end
+        weight: 1
+      - path: Armature/Hips/waist/chest/head
+        weight: 1
+      - path: Armature/Hips/waist/chest/head/head_end
+        weight: 1
+      - path: Armature/leg control.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L
+        weight: 1
+      - path: Armature/leg control.L/feet.L/feet.L_end
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L
+        weight: 1
+      - path: Armature/leg control.L/shin ik.L/shin ik.L_end
+        weight: 1
+      - path: Armature/leg control.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R
+        weight: 1
+      - path: Armature/leg control.R/feet.R/feet.R_end
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R
+        weight: 1
+      - path: Armature/leg control.R/shin ik.R/shin ik.R_end
+        weight: 1
+      - path: Armature/shin pole.L
+        weight: 1
+      - path: Armature/shin pole.L/shin pole.L_end
+        weight: 1
+      - path: Armature/shin pole.R
+        weight: 1
+      - path: Armature/shin pole.R/shin pole.R_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp.001
+        weight: 1
+      - path: Lamp.002
+        weight: 1
+      - path: Lamp.003
+        weight: 1
+      - path: Lamp.004
+        weight: 1
+      - path: Lamp.005
+        weight: 1
+      - path: Lamp.006
+        weight: 1
+      - path: Lamp.007
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

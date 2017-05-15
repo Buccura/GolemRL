@@ -52,7 +52,7 @@ public class BulletController : MonoBehaviour
 	{	GameObject target;
 		target = other.gameObject;
 		if (target != null && target.tag != "Floor")
-		{	Debug.Log(target.tag);
+		{	//Debug.Log(target.tag);
 			if (target.tag == "Wall")
 			{	bullet_vel = Vector3.zero;
 				if (destroy_on_impact)
@@ -66,9 +66,11 @@ public class BulletController : MonoBehaviour
 			}
 			else if (target.tag == "Enemy")
 			{	if (owner == null || owner.tag != "Enemy")
-				{	//TODO: Damage enemy and add score
-					CheckPierce();
-				}
+				{
+                    Npc_Health badHP = target.GetComponent<Npc_Health>();
+                    badHP.HP -= damage;
+                    CheckPierce();
+                }
 			}
 			else if (target.tag == "Player")
 			{	if (owner == null || owner.tag != "Player")

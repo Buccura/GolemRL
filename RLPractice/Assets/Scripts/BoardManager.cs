@@ -96,10 +96,13 @@ public class BoardManager : MonoBehaviour {
     public int playerX, playerY;
 
     public Dictionary<Vector2,Node> pathfindingGrid;
+
+    public AudioSource bgm;
     
 
     void Start()
     {
+        bgm.Play();
         if(useRandomSeed)
         {
             seed = (Random.Range(0, 999999999f) + Time.time).ToString();
