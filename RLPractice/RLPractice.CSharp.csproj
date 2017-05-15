@@ -85,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameManager.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Npc_Health.cs" />
+>>>>>>> master
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
@@ -105,6 +109,12 @@
     <Compile Include="Assets\Scripts\room.cs" />
     <Compile Include="Assets\Scripts\testEnemy.cs" />
     <Compile Include="Assets\animControl_Brock.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\audioControl_Brock.cs" />
+    <Compile Include="Assets\audioControl_GatGolem.cs" />
+    <Compile Include="Assets\env_Goal.cs" />
+>>>>>>> master
     <Compile Include="Assets\env_Wall.cs" />
     <Compile Include="Assets\menu_Main.cs" />
     <Compile Include="Assets\npc_CrashThroughDoodads.cs" />

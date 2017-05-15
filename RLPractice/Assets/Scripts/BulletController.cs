@@ -52,7 +52,7 @@ public class BulletController : MonoBehaviour
 	{	GameObject target;
 		target = other.gameObject;
 		if (target != null && target.tag != "Floor")
-		{	//Debug.Log(target.tag);
+		{	Debug.Log(target.tag);
 			if (target.tag == "Wall")
 			{	bullet_vel = Vector3.zero;
 				if (destroy_on_impact)

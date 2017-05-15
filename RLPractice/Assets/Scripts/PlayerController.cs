@@ -1,6 +1,5 @@
 //GolemRL Player Object Script
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {	public bool cam_relative_controls = false; //Player movement relative to camera instead of grid
@@ -28,8 +27,6 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody player_rb; //Physics for player
 	private GunController gun_ctrl; //Script of selected weapon
 
-    public Slider HPBar;
-
 
 
 	void Start()
@@ -51,9 +48,7 @@ public class PlayerController : MonoBehaviour
 	}
 
 	void Update()
-	{
-        HPBar.value = player_hp;
-        player_vel = Vector3.zero; //Don't drift away if dead
+	{	player_vel = Vector3.zero; //Don't drift away if dead
 		if (player_alive)
 		{	Vector3 aim_point; //Where the cursor is pointing
 			Vector3 aim_vector; //A vector from the player to the cursor
@@ -76,11 +71,9 @@ public class PlayerController : MonoBehaviour
 				{	anim.SetBool("isWalking", false);
 					//anim.SetFloat("WalkForward", 0f);
 				}
-                // Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
-
-                moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
-                Debug.Log(player_vel.x);
-                //Debug.Log(moveAngle);
+				// Debug.Log(Mathf.Atan2(player_vel.x,player_vel.z) * Mathf.Rad2Deg + " " + ( 180f * transform.rotation.y));
+				moveAngle = Mathf.Abs((180f * transform.rotation.y) - (Mathf.Atan2(player_vel.x, player_vel.z) * Mathf.Rad2Deg));
+				//Debug.Log(moveAngle);
 				if(moveAngle < 65 && moveAngle > 28)  
 				{	anim.SetBool("walkForward", true);
 					anim.SetBool("walkBackward", false);
